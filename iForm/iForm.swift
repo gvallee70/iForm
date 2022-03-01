@@ -12,6 +12,6 @@ typealias Action = ()->()
 public class iForm {
     public init() {}
  
-    public func addSignInForm(
+    public func addSignInForm(){}
     
 }
