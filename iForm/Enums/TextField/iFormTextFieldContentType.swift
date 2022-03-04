@@ -1,14 +1,14 @@
 //
-//  iFormTextFieldItem.swift
+//  iFormTextFieldContentType.swift
 //  iForm
 //
-//  Created by Gwendal on 11/02/2022.
+//  Created by Gwendal on 04/03/2022.
 //
 
 import Foundation
 import UIKit
 
-public enum iFormTextFieldType: RawRepresentable {
+public enum iFormTextFieldContentType: RawRepresentable {
     case normal
     case phoneNumber
     case email
@@ -34,30 +34,3 @@ public enum iFormTextFieldType: RawRepresentable {
         }
     }
 }
-
-
-public class iFormTextFieldItem {
-    public var placeholder: String = ""
-    public var text: String = ""
-    public var type: iFormTextFieldType
-
-    public init(placeholder: String, text: String, type: iFormTextFieldType){
-        
-        
-        self.placeholder = placeholder
-        self.text = text
-        self.type = type
-        
-    }
-    
-    public func addView() -> UITextField{
-        let textField               = UITextField(frame: CGRect(x: 200, y: 200, width: 200, height: 30));
-        textField.placeholder       = self.placeholder
-        textField.text              = self.text
-        //textField.keyboard   = self.type
-        
-        return textField
-    }
-
-}
-

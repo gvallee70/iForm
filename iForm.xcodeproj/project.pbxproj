@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE2E90B227D2351C006E1104 /* iFormTextFieldKeyboardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B127D2351C006E1104 /* iFormTextFieldKeyboardType.swift */; };
+		BE2E90B427D2354C006E1104 /* iFormTextFieldContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B327D2354C006E1104 /* iFormTextFieldContentType.swift */; };
+		BE2E90B627D2661E006E1104 /* iFormDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B527D2661E006E1104 /* iFormDelegate.swift */; };
+		BE2E90BC27D276D5006E1104 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90BB27D276D5006E1104 /* Dimensions.swift */; };
+		BE2E90BE27D276EC006E1104 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90BD27D276EC006E1104 /* Constraints.swift */; };
 		BE938FCE27B6A66100F544B2 /* iForm.docc in Sources */ = {isa = PBXBuildFile; fileRef = BE938FCD27B6A66100F544B2 /* iForm.docc */; };
 		BE938FD427B6A66100F544B2 /* iForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE938FC927B6A66000F544B2 /* iForm.framework */; };
 		BE938FD927B6A66100F544B2 /* iFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE938FD827B6A66100F544B2 /* iFormTests.swift */; };
@@ -26,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE2E90B127D2351C006E1104 /* iFormTextFieldKeyboardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormTextFieldKeyboardType.swift; sourceTree = "<group>"; };
+		BE2E90B327D2354C006E1104 /* iFormTextFieldContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormTextFieldContentType.swift; sourceTree = "<group>"; };
+		BE2E90B527D2661E006E1104 /* iFormDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormDelegate.swift; sourceTree = "<group>"; };
+		BE2E90BB27D276D5006E1104 /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		BE2E90BD27D276EC006E1104 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		BE938FC927B6A66000F544B2 /* iForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE938FCC27B6A66100F544B2 /* iForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iForm.h; sourceTree = "<group>"; };
 		BE938FCD27B6A66100F544B2 /* iForm.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iForm.docc; sourceTree = "<group>"; };
@@ -54,6 +64,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE2E90B027D234EF006E1104 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				BE938FE927B6AAEA00F544B2 /* iFormTextFieldItem.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		BE2E90B727D27665006E1104 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BE2E90B027D234EF006E1104 /* TextField */,
+				BE2E90BB27D276D5006E1104 /* Dimensions.swift */,
+				BE2E90BD27D276EC006E1104 /* Constraints.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BE2E90B827D27683006E1104 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BE2E90B927D276A7006E1104 /* TextField */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		BE2E90B927D276A7006E1104 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				BE2E90B127D2351C006E1104 /* iFormTextFieldKeyboardType.swift */,
+				BE2E90B327D2354C006E1104 /* iFormTextFieldContentType.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		BE2E90BA27D276C0006E1104 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				BE2E90B527D2661E006E1104 /* iFormDelegate.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 		BE938FBF27B6A66000F544B2 = {
 			isa = PBXGroup;
 			children = (
@@ -75,10 +128,12 @@
 		BE938FCB27B6A66000F544B2 /* iForm */ = {
 			isa = PBXGroup;
 			children = (
+				BE2E90BA27D276C0006E1104 /* Interfaces */,
+				BE2E90B827D27683006E1104 /* Enums */,
+				BE2E90B727D27665006E1104 /* Classes */,
 				BE938FCC27B6A66100F544B2 /* iForm.h */,
 				BE938FCD27B6A66100F544B2 /* iForm.docc */,
 				BE938FE327B6A73700F544B2 /* iForm.swift */,
-				BE938FE927B6AAEA00F544B2 /* iFormTextFieldItem.swift */,
 			);
 			path = iForm;
 			sourceTree = "<group>";
@@ -200,8 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2E90B627D2661E006E1104 /* iFormDelegate.swift in Sources */,
+				BE2E90B227D2351C006E1104 /* iFormTextFieldKeyboardType.swift in Sources */,
 				BE938FCE27B6A66100F544B2 /* iForm.docc in Sources */,
 				BE938FEA27B6AAEA00F544B2 /* iFormTextFieldItem.swift in Sources */,
+				BE2E90BE27D276EC006E1104 /* Constraints.swift in Sources */,
+				BE2E90B427D2354C006E1104 /* iFormTextFieldContentType.swift in Sources */,
+				BE2E90BC27D276D5006E1104 /* Dimensions.swift in Sources */,
 				BE938FE427B6A73700F544B2 /* iForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
