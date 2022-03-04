@@ -40,18 +40,28 @@ public class iFormTextFieldItem: iFormDelegate {
             self.keyboardType    = keyboardType
     }
     
-    public func display() -> UITextField{
-        self.textField                   = UITextField(frame: CGRect(x: constraints!.getX(), y: constraints!.getY(), width: dimensions!.getWidth(), height: dimensions!.getHeight()));
+    public func display(on view: UIView) {
+        self.textField                   = UITextField();
         self.textField.placeholder       = self.placeholder
         self.textField.text              = self.text
         self.textField.textContentType   = self.contentType?.rawValue
         self.textField.textColor         = self.textColor
         self.textField.backgroundColor   = self.backgroundColor
-    
         if let keyboardType = self.keyboardType {
             self.textField.keyboardType = keyboardType.rawValue
         }
-        return textField
+
+        view.addSubview(textField)
+        
+        let horizontalConstraint = NSLayoutConstraint(item: textField, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: self.constraints!.getHorizontal())
+        let verticalConstraint = NSLayoutConstraint(item: textField, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: self.constraints!.getVertical())
+        let widthConstraint = NSLayoutConstraint(item: textField, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.constraints!.getWidth()!)
+        let heightConstraint = NSLayoutConstraint(item: textField, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.constraints!.getHeight()!)
+        
+        view.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
+           
+        view.addSubview(textField)
+
     }
         
     public func setPlaceholder(_ placeholder: String) {
