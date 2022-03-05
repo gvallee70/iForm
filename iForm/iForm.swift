@@ -8,24 +8,35 @@
 import Foundation
 import UIKit
 
-typealias Action = ()->()
+public typealias Action = ()->()
 
 public class iForm {
     public init() {}
  
+    @objc func buttonClicked() {
+        print("button clicked")
+    }
+    
     public func addSignInForm() -> UIView {
         let view = UIView()
         
         let emailTextField = iFormTextFieldItem(placeholder: "Email")
-        emailTextField.setConstraints(Constraints(20, 20, 100, 20))
+        emailTextField.setConstraints(Constraints(horizontal: 0, vertical: 0, width: 200, height: 30))
         emailTextField.setBackgroundColor(.green)
 
         let passwordTextField = iFormTextFieldItem(placeholder: "Mot de passe")
-        passwordTextField.setConstraints(Constraints(20, 20, 100, 20))
-        let loginButton = UIButton()
+        passwordTextField.setConstraints(Constraints(horizontal: 0, vertical: 50, width: 200, height: 30))
+        
+        
+        let loginButton = iFormButtonItem(text: "Se connecter", textColor: .blue, backgroundColor: .red, action: {
+            self.buttonClicked()
+        })
+        loginButton.setConstraints(Constraints(horizontal: 0, vertical: 150, width: 200, height: 50))
+        
         
         emailTextField.display(on: view)
         passwordTextField.display(on: view)
+        loginButton.display(on: view)
         
         return view
         

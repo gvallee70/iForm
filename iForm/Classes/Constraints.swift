@@ -10,13 +10,13 @@ import Foundation
 public class Constraints {
     private var horizontal: Double
     private var vertical: Double
-    private var width: Double? = 100
+    private var width: Double? = 200
     private var height: Double? = 20
     
-    public init(_ horizontal: Double, _ vertical: Double, _ width: Double? = 100, _ height: Double? = 20) {
+    public init(horizontal: Double, vertical: Double, width: Double? = 200, height: Double? = 20) {
         self.horizontal = horizontal
         self.vertical = vertical
-        self.width = height
+        self.width = width
         self.height = height
     }
     

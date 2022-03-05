@@ -14,11 +14,9 @@ public protocol iFormDelegate {
     var textColor: UIColor? { get set }
     var backgroundColor: UIColor? { get set }
     var constraints: Constraints? { get set }
-    var dimensions: Dimensions? { get set }
 
     func setText(_ text: String)
     func setTextColor(_ color: UIColor)
     func setBackgroundColor(_ color: UIColor)
-    func setDimensions(_ dimensions: Dimensions)
     func setConstraints(_ constraints: Constraints)
 }
