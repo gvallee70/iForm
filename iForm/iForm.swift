@@ -14,7 +14,6 @@ public typealias Action = ()->()
 public class iForm {
     public init() {}
     
-    @objc
     func buttonClicked() {
         print("button clicked")
     }
@@ -24,16 +23,17 @@ public class iForm {
         
         let emailTextField = iFormTextFieldItem(placeholder: "Email")
         emailTextField.setConstraints(Constraints(horizontal: 0, vertical: 0, width: 200, height: 30))
-        emailTextField.setBackgroundColor(.green)
+        emailTextField.setBackgroundColor(.white)
 
-        let passwordTextField = iFormTextFieldItem(placeholder: "Mot de passe")
+        let passwordTextField = iFormTextFieldItem(placeholder: "Password")
         passwordTextField.setConstraints(Constraints(horizontal: 0, vertical: 50, width: 200, height: 30))
+        passwordTextField.setBackgroundColor(.white)
         
-        
-        let loginButton = iFormButtonItem(text: "Se connecter", textColor: .blue, backgroundColor: .red, action: UIAction() { _ in
+        let loginButton = iFormButtonItem(text: "Sign in", textColor: .darkGray, backgroundColor: .lightGray, action: UIAction() { _ in
             self.buttonClicked()
         })
-        loginButton.setConstraints(Constraints(horizontal: 0, vertical: 150, width: 200, height: 50))
+        
+        loginButton.setConstraints(Constraints(horizontal: 0, vertical: 150, width: 200, height: 30))
         
         emailTextField.display(on: view)
         passwordTextField.display(on: view)

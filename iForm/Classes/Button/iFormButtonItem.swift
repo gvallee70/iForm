@@ -23,7 +23,7 @@ public class iFormButtonItem: iFormDelegate {
         text: String? = "",
         textColor: UIColor? = UIColor.black,
         backgroundColor: UIColor? = UIColor.lightGray,
-        constraints: Constraints? = Constraints(horizontal: 0, vertical: 0, width: 100, height: 60),
+        constraints: Constraints? = Constraints(horizontal: 0, vertical: 0, width: 100, height: 15),
         action: UIAction) {
             self.text            = text
             self.textColor       = textColor
@@ -34,11 +34,21 @@ public class iFormButtonItem: iFormDelegate {
     
     @available(iOS 14.0, *)
     public func display(on view: UIView) {
-        self.button = UIButton(frame: CGRect(x: (constraints!.getHorizontal()), y: constraints!.getVertical(), width: constraints!.getWidth()!, height: constraints!.getHeight()!),primaryAction: self.action)
+        self.button = UIButton(type : .system,primaryAction: self.action)
+        
+        self.button.setTitle(self.text, for: .normal)
+        
+        //Styling button's layer
+        self.button.layer.cornerRadius  = CGFloat(5.0)
+        self.button.layer.borderColor   = UIColor.lightGray.cgColor
+        self.button.layer.borderWidth   = CGFloat(1.0)
+        
+        self.button.backgroundColor     = self.backgroundColor
         
         self.button.setTitle(self.text, for: .normal)
         self.button.setTitleColor(self.textColor, for: .normal)
-        self.button.backgroundColor = self.backgroundColor
+        
+        self.button.frame               = CGRect(x: (constraints!.getHorizontal()), y: constraints!.getVertical(), width: constraints!.getWidth()!,height: constraints!.getHeight()!)
         
 
         view.addSubview(self.button)
@@ -71,6 +81,10 @@ public class iFormButtonItem: iFormDelegate {
     
     public func setConstraints(_ constraints: Constraints) {
         self.constraints = constraints
+    }
+    
+    public func setBorderRadius(radius : CGFloat){
+        self.button.layer.cornerRadius = radius;
     }
     
 }

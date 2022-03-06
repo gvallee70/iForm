@@ -40,11 +40,16 @@ public class iFormTextFieldItem: iFormDelegate {
     public func display(on view: UIView) {
         self.textField = UITextField(frame: CGRect(x: (constraints!.getHorizontal()), y: constraints!.getVertical(), width: constraints!.getWidth()!, height: constraints!.getHeight()!))
         
-        self.textField.placeholder       = self.placeholder
-        self.textField.text              = self.text
-        self.textField.textContentType   = self.contentType?.rawValue
-        self.textField.textColor         = self.textColor
-        self.textField.backgroundColor   = self.backgroundColor
+        //Styling textField default layer
+        self.textField.layer.cornerRadius   = CGFloat(5.0)
+        self.textField.addLeftPadding(paddingValue: 10.0)
+        
+        
+        self.textField.placeholder          = self.placeholder
+        self.textField.text                 = self.text
+        self.textField.textContentType      = self.contentType?.rawValue
+        self.textField.textColor            = self.textColor
+        self.textField.backgroundColor      = self.backgroundColor
         
         if let keyboardType = self.keyboardType {
             self.textField.keyboardType = keyboardType.rawValue
@@ -91,5 +96,19 @@ public class iFormTextFieldItem: iFormDelegate {
         self.constraints = constraints
     }
     
+}
+
+extension UITextField {
+    func addLeftPadding(paddingValue : CGFloat){
+        let padding = UIView(frame : CGRect(x: 0, y: 0, width: paddingValue, height: self.frame.size.height))
+        self.leftView = padding
+        self.leftViewMode = .always
+    }
+    
+    func addRightPadding(paddingValue : CGFloat){
+        let padding = UIView(frame : CGRect(x: 0, y: 0, width: paddingValue, height: self.frame.size.height))
+        self.rightView = padding
+        self.leftViewMode = .always
+    }
 }
 
