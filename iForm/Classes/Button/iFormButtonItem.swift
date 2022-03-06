@@ -17,14 +17,14 @@ public class iFormButtonItem: iFormDelegate {
     public var dimensions: Dimensions?
     
     private var button: UIButton = UIButton()
-    @objc private var action: Action
+    @objc private var action: UIAction
     
     public init(
         text: String? = "",
         textColor: UIColor? = UIColor.black,
         backgroundColor: UIColor? = UIColor.lightGray,
         constraints: Constraints? = Constraints(horizontal: 0, vertical: 0, width: 100, height: 60),
-        action: @escaping Action) {
+        action: UIAction) {
             self.text            = text
             self.textColor       = textColor
             self.backgroundColor = backgroundColor
@@ -32,13 +32,14 @@ public class iFormButtonItem: iFormDelegate {
             self.action          = action
     }
     
+    @available(iOS 14.0, *)
     public func display(on view: UIView) {
-        self.button = UIButton(frame: CGRect(x: (constraints!.getHorizontal()), y: constraints!.getVertical(), width: constraints!.getWidth()!, height: constraints!.getHeight()!))
+        self.button = UIButton(frame: CGRect(x: (constraints!.getHorizontal()), y: constraints!.getVertical(), width: constraints!.getWidth()!, height: constraints!.getHeight()!),primaryAction: self.action)
         
         self.button.setTitle(self.text, for: .normal)
         self.button.setTitleColor(self.textColor, for: .normal)
         self.button.backgroundColor = self.backgroundColor
-        self.button.addTarget(self, action: #selector(getter: self.action), for: .touchUpInside)
+        
 
         view.addSubview(self.button)
         self.button.translatesAutoresizingMaskIntoConstraints = false

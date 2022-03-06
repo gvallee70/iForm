@@ -10,15 +10,17 @@ import UIKit
 
 public typealias Action = ()->()
 
+@available(iOS 14.0, *)
 public class iForm {
     public init() {}
- 
-    @objc func buttonClicked() {
+    
+    @objc
+    func buttonClicked() {
         print("button clicked")
     }
     
-    public func addSignInForm() -> UIView {
-        let view = UIView()
+    public func addSignInForm(parentView : UIView) -> UIView {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: parentView.frame.size.width, height: parentView.frame.size.height))
         
         let emailTextField = iFormTextFieldItem(placeholder: "Email")
         emailTextField.setConstraints(Constraints(horizontal: 0, vertical: 0, width: 200, height: 30))
@@ -28,11 +30,10 @@ public class iForm {
         passwordTextField.setConstraints(Constraints(horizontal: 0, vertical: 50, width: 200, height: 30))
         
         
-        let loginButton = iFormButtonItem(text: "Se connecter", textColor: .blue, backgroundColor: .red, action: {
+        let loginButton = iFormButtonItem(text: "Se connecter", textColor: .blue, backgroundColor: .red, action: UIAction() { _ in
             self.buttonClicked()
         })
         loginButton.setConstraints(Constraints(horizontal: 0, vertical: 150, width: 200, height: 50))
-        
         
         emailTextField.display(on: view)
         passwordTextField.display(on: view)
