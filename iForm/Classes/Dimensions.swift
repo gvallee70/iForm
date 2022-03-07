@@ -24,11 +24,11 @@ public class Dimensions {
         return self.width;
     }
     
-    public func setHeight(_ height: Double) {
+    private func setHeight(_ height: Double) {
         self.height = height;
     }
     
-    public func setWidth(_ width: Double) {
+    private func setWidth(_ width: Double) {
         self.width = width;
     }
 }

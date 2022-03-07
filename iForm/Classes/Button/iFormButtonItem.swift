@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @available(iOS 14.0, *)
-public class iFormButtonItem: iFormDelegate {
+public class iFormButtonItem: UIButton, iFormDelegate {
     //from iFormDelegate
     public private(set) var txt: String?
     public private(set) var txtColor: UIColor?
@@ -17,20 +17,28 @@ public class iFormButtonItem: iFormDelegate {
     public private(set) var constr: Constraints?
     
     private var button: UIButton = UIButton()
-    @objc private var action: UIAction
+    private var action: UIAction = UIAction{_ in }
     
     public init(
+        frame: CGRect = CGRect(x: 0, y: 0, width: 100, height: 15),
         text: String? = "",
         textColor: UIColor? = UIColor.black,
         backgroundColor: UIColor? = UIColor.lightGray,
-        constraints: Constraints? = Constraints(horizontal: 0, vertical: 0, width: 100, height: 15),
-        action: UIAction) {
-            self.txt            = text
-            self.txtColor       = textColor
+        constraints: Constraints = Constraints(horizontal: 0, vertical: 0, width: 100, height: 15),
+        action: UIAction = UIAction { _ in }
+    ) {
+            super.init(frame: frame)
+            
+            self.txt             = text
+            self.txtColor        = textColor
             self.bcgColor        = backgroundColor
             self.constr          = constraints
             self.action          = action
             
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
     }
     
     
@@ -47,19 +55,15 @@ public class iFormButtonItem: iFormDelegate {
         
         self.button.backgroundColor     = self.bcgColor
         
-        self.button.setTitle(self.txt, for: .normal)
         self.button.setTitleColor(self.txtColor, for: .normal)
-        
-        self.button.frame               = CGRect(x: (constr!.getHorizontal()), y: constr!.getVertical(), width: constr!.getWidth()!,height: constr!.getHeight()!)
-        
 
         view.addSubview(self.button)
         self.button.translatesAutoresizingMaskIntoConstraints = false
         
         let horizontalConstraint = NSLayoutConstraint(item: self.button, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: self.constr!.getHorizontal())
         let verticalConstraint = NSLayoutConstraint(item: self.button, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: self.constr!.getVertical())
-        let widthConstraint = NSLayoutConstraint(item: self.button, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.constr!.getWidth()!)
-        let heightConstraint = NSLayoutConstraint(item: self.button, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.constr!.getHeight()!)
+        let widthConstraint = NSLayoutConstraint(item: self.button, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.constr!.getWidth())
+        let heightConstraint = NSLayoutConstraint(item: self.button, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.constr!.getHeight())
         
         view.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
            

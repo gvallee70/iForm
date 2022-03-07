@@ -10,10 +10,10 @@ import Foundation
 public class Constraints {
     private var horizontal: Double
     private var vertical: Double
-    private var width: Double? = 200
-    private var height: Double? = 20
+    private var width: Double
+    private var height: Double
     
-    public init(horizontal: Double, vertical: Double, width: Double? = 200, height: Double? = 20) {
+    public init(horizontal: Double, vertical: Double, width: Double, height: Double) {
         self.horizontal = horizontal
         self.vertical = vertical
         self.width = width
@@ -28,28 +28,28 @@ public class Constraints {
         return self.vertical;
     }
     
-    public func getHeight() -> Double? {
+    public func getHeight() -> Double {
         return self.height;
     }
     
-    public func getWidth() -> Double? {
+    public func getWidth() -> Double {
         return self.width;
     }
     
-    public func setHorizontal(_ horizontal: Double) {
+    private func setHorizontal(_ horizontal: Double) {
         self.horizontal = horizontal;
     }
     
-    public func setVertical(_ vertical: Double) {
+    private func setVertical(_ vertical: Double) {
         self.vertical = vertical;
     }
     
     
-    public func setHeight(_ height: Double) {
+    private func setHeight(_ height: Double) {
         self.height = height;
     }
     
-    public func setWidth(_ width: Double) {
+    private func setWidth(_ width: Double) {
         self.width = width;
     }
     

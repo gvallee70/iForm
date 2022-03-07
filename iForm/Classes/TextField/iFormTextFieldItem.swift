@@ -21,12 +21,12 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
     private var keybType: iFormTextFieldKeyboardType?
     
     public init(
-        frame: CGRect,
+        frame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 50),
         placeholder: String? = "",
         text: String? = "",
         textColor: UIColor? = UIColor.black,
         backgroundColor: UIColor? = UIColor.lightGray,
-        constraints: Constraints? = Constraints(horizontal: 0, vertical: 0, width: 200, height: 20),
+        constraints: Constraints = Constraints(horizontal: 0, vertical: 0, width: 200, height: 20),
         contentType: iFormTextFieldContentType? = .normal,
         keyboardType: iFormTextFieldKeyboardType? = .normal) {
             super.init(frame: frame)
@@ -47,12 +47,11 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
     
     
     public func display(on view: UIView) {
-        self.textField = UITextField(frame: CGRect(x: (constr!.getHorizontal()), y: constr!.getVertical(), width: constr!.getWidth()!, height: constr!.getHeight()!))
+        self.textField = UITextField(frame: CGRect(x: (constr!.getHorizontal()), y: constr!.getVertical(), width: constr!.getWidth(), height: constr!.getHeight()))
         
         //Styling textField default layer
         self.textField.layer.cornerRadius   = CGFloat(5.0)
         self.textField.addLeftPadding(paddingValue: 10.0)
-        
         
         self.textField.placeholder          = self.placeholderText
         self.textField.text                 = self.txt
@@ -65,29 +64,18 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
         }
 
         view.addSubview(self.textField)
-        
+
         self.textField.translatesAutoresizingMaskIntoConstraints = false
         
         let horizontalConstraint = NSLayoutConstraint(item: self.textField, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: self.constr!.getHorizontal())
         let verticalConstraint = NSLayoutConstraint(item: self.textField, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: self.constr!.getVertical())
-        let widthConstraint = NSLayoutConstraint(item: self.textField, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.constr!.getWidth()!)
-        let heightConstraint = NSLayoutConstraint(item: self.textField, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.constr!.getHeight()!)
+        let widthConstraint = NSLayoutConstraint(item: self.textField, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.constr!.getWidth())
+        let heightConstraint = NSLayoutConstraint(item: self.textField, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.constr!.getHeight())
         
         view.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
            
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let nextTag = self.textField.tag + 1
-
-        if let nextResponder = self.textField.superview?.viewWithTag(nextTag) {
-            nextResponder.becomeFirstResponder()
-        } else {
-            self.textField.resignFirstResponder()
-        }
-
-        return true
-    }
         
     public func setPlaceholder(_ placeholder: String) {
         self.placeholderText = placeholder
@@ -117,7 +105,7 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
     public func setConstraints(_ constraints: Constraints) {
         self.constr = constraints
     }
-    
+ 
 }
 
 extension UITextField {
