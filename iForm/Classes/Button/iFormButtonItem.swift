@@ -14,7 +14,6 @@ public class iFormButtonItem: iFormDelegate {
     public var textColor: UIColor?
     public var backgroundColor: UIColor?
     public var constraints: Constraints?
-    public var dimensions: Dimensions?
     
     private var button: UIButton = UIButton()
     @objc private var action: UIAction
@@ -65,9 +64,6 @@ public class iFormButtonItem: iFormDelegate {
         self.backgroundColor = color
     }
     
-    public func setDimensions(_ dimensions: Dimensions) {
-        self.dimensions = dimensions
-    }
     
     public func setConstraints(_ constraints: Constraints) {
         self.constraints = constraints
