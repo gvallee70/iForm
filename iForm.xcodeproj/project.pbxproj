@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57EA01CF27D6A59B00A3C0D0 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA01CE27D6A59B00A3C0D0 /* Style.swift */; };
+		57EA01D227D6AFC700A3C0D0 /* light.json in Resources */ = {isa = PBXBuildFile; fileRef = 57EA01D127D6AFC700A3C0D0 /* light.json */; };
 		BE2E90B227D2351C006E1104 /* iFormTextFieldKeyboardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B127D2351C006E1104 /* iFormTextFieldKeyboardType.swift */; };
 		BE2E90B427D2354C006E1104 /* iFormTextFieldContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B327D2354C006E1104 /* iFormTextFieldContentType.swift */; };
 		BE2E90B627D2661E006E1104 /* iFormDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B527D2661E006E1104 /* iFormDelegate.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57EA01CE27D6A59B00A3C0D0 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		57EA01D127D6AFC700A3C0D0 /* light.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = light.json; sourceTree = "<group>"; };
 		BE2E90B127D2351C006E1104 /* iFormTextFieldKeyboardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormTextFieldKeyboardType.swift; sourceTree = "<group>"; };
 		BE2E90B327D2354C006E1104 /* iFormTextFieldContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormTextFieldContentType.swift; sourceTree = "<group>"; };
 		BE2E90B527D2661E006E1104 /* iFormDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57EA01D027D6AF9600A3C0D0 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				57EA01D127D6AFC700A3C0D0 /* light.json */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		BE2E90B027D234EF006E1104 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +93,7 @@
 				BE2E90B027D234EF006E1104 /* TextField */,
 				BE2E90BB27D276D5006E1104 /* Dimensions.swift */,
 				BE2E90BD27D276EC006E1104 /* Constraints.swift */,
+				57EA01CE27D6A59B00A3C0D0 /* Style.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -139,6 +152,7 @@
 		BE938FCB27B6A66000F544B2 /* iForm */ = {
 			isa = PBXGroup;
 			children = (
+				57EA01D027D6AF9600A3C0D0 /* Style */,
 				BE2E90BA27D276C0006E1104 /* Interfaces */,
 				BE2E90B827D27683006E1104 /* Enums */,
 				BE2E90B727D27665006E1104 /* Classes */,
@@ -249,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57EA01D227D6AFC700A3C0D0 /* light.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +290,7 @@
 				BE2E90B427D2354C006E1104 /* iFormTextFieldContentType.swift in Sources */,
 				BE2E90BC27D276D5006E1104 /* Dimensions.swift in Sources */,
 				BE938FE427B6A73700F544B2 /* iForm.swift in Sources */,
+				57EA01CF27D6A59B00A3C0D0 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

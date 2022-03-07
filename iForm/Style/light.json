@@ -1,0 +1,11 @@
+{
+    "name"      : "light",
+    "width"     : 200.0,
+    "height"    : 30.0,
+    "radius"    : 5.0,
+    "padding"   : 10.0,
+    "margin"    : 10.0,
+    "txtColor"  : ".black",
+    "bgColor"   : ".white",
+    "buttonsColor" : ".systemblue"
+}
