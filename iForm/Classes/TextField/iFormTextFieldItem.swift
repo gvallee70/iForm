@@ -10,10 +10,10 @@ import UIKit
 
 public class iFormTextFieldItem: iFormDelegate {
     //from iFormDelegate
-    public var text: String?
-    public var textColor: UIColor?
-    public var backgroundColor: UIColor?
-    public var constraints: Constraints?
+    public private(set) var text: String?
+    public private(set) var textColor: UIColor?
+    public private(set) var backgroundColor: UIColor?
+    public private(set) var constraints: Constraints?
     
     private var textField: UITextField = UITextField()
     private var placeholder: String?
@@ -65,6 +65,18 @@ public class iFormTextFieldItem: iFormDelegate {
         
         view.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
            
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let nextTag = self.textField.tag + 1
+
+        if let nextResponder = self.textField.superview?.viewWithTag(nextTag) {
+            nextResponder.becomeFirstResponder()
+        } else {
+            self.textField.resignFirstResponder()
+        }
+
+        return true
     }
         
     public func setPlaceholder(_ placeholder: String) {
