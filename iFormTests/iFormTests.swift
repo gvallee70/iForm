@@ -10,31 +10,26 @@ import XCTest
 
 class iFormTests: XCTestCase {
     let form = iForm()
-    let app = XCUIApplication()
 
     override func setUp() {
         super.setUp()
     
         continueAfterFailure = false
-        app.launch()
+        
         
     }
 
 
-    func testSignInFormIsDisplayed() throws {
-        let view = UIView()
+    func testNumberOfViewsOfSignInForm() throws {
         let signInForm = form.initSignInForm()
-        form.display(signInForm, on: view)
         
-        XCTAssert(app.staticTexts["Email"].exists)
-        XCTAssert(app.staticTexts["Password"].exists)
+        XCTAssertEqual(signInForm.subviews.count, 3)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testSetTextMethod() throws {
+        let button = form.initButton()
+        button.setText("Test")
+        XCTAssertTrue(button.txt == "Test")
     }
 
 }
