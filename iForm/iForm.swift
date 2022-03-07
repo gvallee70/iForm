@@ -19,7 +19,6 @@ public class iForm {
         self.signInForm.emailTextField = self.initTextField(
             placeholder: "Email",
             backgroundColor: .white,
-            constraints: Constraints(horizontal: 0, vertical: 0, width: 200, height: 30),
             contentType: .email,
             keyboardType: .email
         )
@@ -27,7 +26,6 @@ public class iForm {
         self.signInForm.passwordTextField = self.initTextField(
             placeholder: "Password",
             backgroundColor: .white,
-            constraints: Constraints(horizontal: 0, vertical: 50, width: 200, height: 30),
             contentType: .password
         )
 
@@ -40,8 +38,8 @@ public class iForm {
             action: actionToPerform
         )
         
-        self.signInForm.emailTextField.display(on: self.signInForm)
-        self.signInForm.passwordTextField.display(on: self.signInForm)
+        self.signInForm.emailTextField.display(on: self.signInForm, withConstraints: Constraints(horizontal: 0, vertical: 0, width: 200, height: 30))
+        self.signInForm.passwordTextField.display(on: self.signInForm, withConstraints: Constraints(horizontal: 0, vertical: 50, width: 200, height: 30))
         self.signInForm.signInButton.display(on: self.signInForm)
 
         return signInForm
@@ -49,20 +47,18 @@ public class iForm {
     
     
     public func initTextField(
-        placeholder: String? = "",
-        text: String? = "",
-        textColor: UIColor? = .darkText,
-        backgroundColor: UIColor? = .lightGray,
-        constraints: Constraints = Constraints(horizontal: 0, vertical: 30, width: 200, height: 30),
-        contentType: iFormTextFieldContentType? = .normal,
-        keyboardType: iFormTextFieldKeyboardType? = .normal
+        placeholder: String = "",
+        text: String = "",
+        textColor: UIColor = .darkText,
+        backgroundColor: UIColor = .lightGray,
+        contentType: iFormTextFieldContentType = .normal,
+        keyboardType: iFormTextFieldKeyboardType = .normal
     ) -> iFormTextFieldItem {
         return iFormTextFieldItem(
             placeholder: placeholder,
             text: text,
             textColor: textColor,
             backgroundColor: backgroundColor,
-            constraints: constraints,
             contentType: contentType,
             keyboardType: keyboardType
         )
