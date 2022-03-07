@@ -5,24 +5,18 @@
 //  Created by Gwendal on 11/02/2022.
 //
 
-import Foundation
 import UIKit
-
-public typealias Action = ()->()
 
 @available(iOS 14.0, *)
 public class iForm {
+    public private(set) var signInForm: SignInForm = SignInForm()
     
     public init() {}
-
+    
     public func initSignInForm(
-        on parentView : UIView,
-        withConstraints constraints: Constraints = Constraints(horizontal: 0, vertical: 0, width: 0, height: 0),
         actionToPerform : UIAction = UIAction { _ in }
-    ) -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: parentView.frame.size.width, height: parentView.frame.size.height))
-        
-        let emailTextField = self.initTextField(
+    ) -> SignInForm {
+        self.signInForm.emailTextField = self.initTextField(
             placeholder: "Email",
             backgroundColor: .white,
             constraints: Constraints(horizontal: 0, vertical: 0, width: 200, height: 30),
@@ -30,7 +24,7 @@ public class iForm {
             keyboardType: .email
         )
 
-        let passwordTextField = self.initTextField(
+        self.signInForm.passwordTextField = self.initTextField(
             placeholder: "Password",
             backgroundColor: .white,
             constraints: Constraints(horizontal: 0, vertical: 50, width: 200, height: 30),
@@ -38,7 +32,7 @@ public class iForm {
         )
 
         
-        let signInButton = self.initButton(
+        self.signInForm.signInButton = self.initButton(
             text: "Sign In",
             textColor: .darkGray,
             backgroundColor: .lightGray,
@@ -46,25 +40,11 @@ public class iForm {
             action: actionToPerform
         )
         
-        emailTextField.display(on: view)
-        passwordTextField.display(on: view)
-        signInButton.display(on: view)
-        
-        parentView.addSubview(view)
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        let horizontalConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: parentView, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: constraints.getHorizontal())
-        
-        let verticalConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: parentView, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: constraints.getVertical())
-        
-        let widthConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: parentView, attribute: .width, multiplier: 1, constant: constraints.getWidth())
-        
-        let heightConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: parentView, attribute: .height, multiplier: 1, constant: constraints.getHeight())
-        
+        self.signInForm.emailTextField.display(on: self.signInForm)
+        self.signInForm.passwordTextField.display(on: self.signInForm)
+        self.signInForm.signInButton.display(on: self.signInForm)
 
-        parentView.addConstraints([horizontalConstraint, verticalConstraint,widthConstraint,heightConstraint])
-        
-        return view
+        return signInForm
     }
     
     
@@ -105,6 +85,27 @@ public class iForm {
             constraints: constraints!,
             action: action
         )
+    }
+    
+    
+    public func display(
+        _ view: UIView,
+        on parentView: UIView,
+        withConstraints constraints: Constraints = Constraints(horizontal: 0, vertical: 0, width: 0, height: 0)
+    ) {
+        parentView.addSubview(view)
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        let horizontalConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: parentView, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: constraints.getHorizontal())
+        
+        let verticalConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: parentView, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: constraints.getVertical())
+        
+        let widthConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: parentView, attribute: .width, multiplier: 1, constant: constraints.getWidth())
+        
+        let heightConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: parentView, attribute: .height, multiplier: 1, constant: constraints.getHeight())
+        
+
+        parentView.addConstraints([horizontalConstraint, verticalConstraint,widthConstraint,heightConstraint])
     }
     
     
