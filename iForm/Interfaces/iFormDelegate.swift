@@ -10,10 +10,10 @@ import UIKit
 
 
 public protocol iFormDelegate {
-    var text: String? { get }
-    var textColor: UIColor? { get }
-    var backgroundColor: UIColor? { get }
-    var constraints: Constraints? { get }
+    var txt: String? { get }
+    var txtColor: UIColor? { get }
+    var bcgColor: UIColor? { get }
+    var constr: Constraints? { get }
 
     func setText(_ text: String)
     func setTextColor(_ color: UIColor)
