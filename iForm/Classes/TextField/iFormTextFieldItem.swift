@@ -12,13 +12,17 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
     //from iFormDelegate
     public private(set) var txt: String?
     public private(set) var txtColor: UIColor?
-    public private(set) var bcgColor: UIColor?
+    public private(set) var bcgColor: UIColor? {
+        didSet {
+            self.textField.backgroundColor = self.bcgColor
+        }
+    }
     public private(set) var constr: Constraints?
     
-    private var textField: UITextField = UITextField()
-    private var placeholderText: String?
-    private var contentType: iFormTextFieldContentType?
-    private var keybType: iFormTextFieldKeyboardType?
+    public private(set) var textField: UITextField = UITextField()
+    public private(set) var placeholderText: String?
+    public private(set) var contentType: iFormTextFieldContentType?
+    public private(set) var keybType: iFormTextFieldKeyboardType?
     
     public init(
         frame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 50),
@@ -39,6 +43,22 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
             self.contentType     = contentType
             self.keybType        = keyboardType
             
+            self.textField = UITextField(frame: CGRect(x: (constr!.getHorizontal()), y: constr!.getVertical(), width: constr!.getWidth(), height: constr!.getHeight()))
+            
+            //Styling textField default layer
+            self.textField.layer.cornerRadius   = CGFloat(5.0)
+            self.textField.addLeftPadding(paddingValue: 10.0)
+            
+            self.textField.placeholder          = self.placeholderText
+            self.textField.text                 = self.txt
+            self.textField.textContentType      = self.contentType?.rawValue
+            self.textField.textColor            = self.txtColor
+            self.textField.backgroundColor      = self.bcgColor
+            
+            if let keyboardType = self.keybType {
+                self.textField.keyboardType = keyboardType.rawValue
+            }
+            
         }
     
     required init?(coder: NSCoder) {
@@ -47,21 +67,6 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
     
     
     public func display(on view: UIView) {
-        self.textField = UITextField(frame: CGRect(x: (constr!.getHorizontal()), y: constr!.getVertical(), width: constr!.getWidth(), height: constr!.getHeight()))
-        
-        //Styling textField default layer
-        self.textField.layer.cornerRadius   = CGFloat(5.0)
-        self.textField.addLeftPadding(paddingValue: 10.0)
-        
-        self.textField.placeholder          = self.placeholderText
-        self.textField.text                 = self.txt
-        self.textField.textContentType      = self.contentType?.rawValue
-        self.textField.textColor            = self.txtColor
-        self.textField.backgroundColor      = self.bcgColor
-        
-        if let keyboardType = self.keybType {
-            self.textField.keyboardType = keyboardType.rawValue
-        }
 
         view.addSubview(self.textField)
 
