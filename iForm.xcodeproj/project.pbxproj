@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57EA01CF27D6A59B00A3C0D0 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA01CE27D6A59B00A3C0D0 /* Style.swift */; };
 		57EA01D227D6AFC700A3C0D0 /* light.json in Resources */ = {isa = PBXBuildFile; fileRef = 57EA01D127D6AFC700A3C0D0 /* light.json */; };
+		57EA01D827D6C8CE00A3C0D0 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA01D727D6C8CE00A3C0D0 /* Style.swift */; };
+		57EA01DD27D6CA4700A3C0D0 /* UIButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA01DC27D6CA4700A3C0D0 /* UIButtonStyle.swift */; };
+		57EA01DF27D6CB6C00A3C0D0 /* UITextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA01DE27D6CB6C00A3C0D0 /* UITextfieldStyle.swift */; };
 		BE2E90B227D2351C006E1104 /* iFormTextFieldKeyboardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B127D2351C006E1104 /* iFormTextFieldKeyboardType.swift */; };
 		BE2E90B427D2354C006E1104 /* iFormTextFieldContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B327D2354C006E1104 /* iFormTextFieldContentType.swift */; };
 		BE2E90B627D2661E006E1104 /* iFormDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B527D2661E006E1104 /* iFormDelegate.swift */; };
@@ -35,8 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		57EA01CE27D6A59B00A3C0D0 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		57EA01D127D6AFC700A3C0D0 /* light.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = light.json; sourceTree = "<group>"; };
+		57EA01D727D6C8CE00A3C0D0 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		57EA01DC27D6CA4700A3C0D0 /* UIButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonStyle.swift; sourceTree = "<group>"; };
+		57EA01DE27D6CB6C00A3C0D0 /* UITextfieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextfieldStyle.swift; sourceTree = "<group>"; };
 		BE2E90B127D2351C006E1104 /* iFormTextFieldKeyboardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormTextFieldKeyboardType.swift; sourceTree = "<group>"; };
 		BE2E90B327D2354C006E1104 /* iFormTextFieldContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormTextFieldContentType.swift; sourceTree = "<group>"; };
 		BE2E90B527D2661E006E1104 /* iFormDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,15 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		57EA01DB27D6CA2900A3C0D0 /* InputStyle */ = {
+			isa = PBXGroup;
+			children = (
+				57EA01DC27D6CA4700A3C0D0 /* UIButtonStyle.swift */,
+				57EA01DE27D6CB6C00A3C0D0 /* UITextfieldStyle.swift */,
+			);
+			path = InputStyle;
+			sourceTree = "<group>";
+		};
 		BE2E90B027D234EF006E1104 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,12 +104,12 @@
 		BE2E90B727D27665006E1104 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				57EA01DB27D6CA2900A3C0D0 /* InputStyle */,
 				BE2E90D127D658FA006E1104 /* SignInForm */,
 				BE2E90BF27D3C819006E1104 /* Button */,
 				BE2E90B027D234EF006E1104 /* TextField */,
 				BE2E90BB27D276D5006E1104 /* Dimensions.swift */,
 				BE2E90BD27D276EC006E1104 /* Constraints.swift */,
-				57EA01CE27D6A59B00A3C0D0 /* Style.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -122,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				BE2E90B527D2661E006E1104 /* iFormDelegate.swift */,
+				57EA01D727D6C8CE00A3C0D0 /* Style.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -300,9 +314,11 @@
 				BE938FEA27B6AAEA00F544B2 /* iFormTextFieldItem.swift in Sources */,
 				BE2E90BE27D276EC006E1104 /* Constraints.swift in Sources */,
 				BE2E90B427D2354C006E1104 /* iFormTextFieldContentType.swift in Sources */,
+				57EA01DF27D6CB6C00A3C0D0 /* UITextfieldStyle.swift in Sources */,
 				BE2E90BC27D276D5006E1104 /* Dimensions.swift in Sources */,
+				57EA01DD27D6CA4700A3C0D0 /* UIButtonStyle.swift in Sources */,
 				BE938FE427B6A73700F544B2 /* iForm.swift in Sources */,
-				57EA01CF27D6A59B00A3C0D0 /* Style.swift in Sources */,
+				57EA01D827D6C8CE00A3C0D0 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,13 +35,13 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
         keyboardType: iFormTextFieldKeyboardType? = .normal) {
             super.init(frame: frame)
 
-            self.txt            = text
-            self.txtColor       = textColor
-            self.bcgColor = backgroundColor
-            self.constr          = constraints
-            self.placeholderText     = placeholder
-            self.contentType     = contentType
-            self.keybType        = keyboardType
+            self.txt                = text
+            self.txtColor           = textColor
+            self.bcgColor           = backgroundColor
+            self.constr             = constraints
+            self.placeholderText    = placeholder
+            self.contentType        = contentType
+            self.keybType           = keyboardType
             
             self.textField = UITextField(frame: CGRect(x: (constr!.getHorizontal()), y: constr!.getVertical(), width: constr!.getWidth(), height: constr!.getHeight()))
             

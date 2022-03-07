@@ -9,12 +9,14 @@ import UIKit
 
 @available(iOS 14.0, *)
 public class iForm {
-    public private(set) var signInForm: SignInForm = SignInForm()
+    public private(set) var signInForm   = SignInForm()
     
     public init() {}
     
     public func initSignInForm(
-        actionToPerform : UIAction = UIAction { _ in }
+        actionToPerform : UIAction = UIAction { _ in },
+        textfieldStyle : UITextFieldStyle?,
+        buttonStyle : UIButtonStyle?
     ) -> SignInForm {
         self.signInForm.emailTextField = self.initTextField(
             placeholder: "Email",
@@ -55,7 +57,8 @@ public class iForm {
         backgroundColor: UIColor? = .lightGray,
         constraints: Constraints = Constraints(horizontal: 0, vertical: 30, width: 200, height: 30),
         contentType: iFormTextFieldContentType? = .normal,
-        keyboardType: iFormTextFieldKeyboardType? = .normal
+        keyboardType: iFormTextFieldKeyboardType? = .normal,
+        textFieldStyle : UITextFieldStyle? = UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: <#T##Double#>, backgroundColor: .white, textColor: .black, tintColor: .white)
     ) -> iFormTextFieldItem {
         return iFormTextFieldItem(
             placeholder: placeholder,
@@ -75,6 +78,7 @@ public class iForm {
         textColor: UIColor? = .darkText,
         backgroundColor: UIColor? = .lightGray,
         constraints: Constraints? = Constraints(horizontal: 0, vertical: 40, width: 200, height: 50),
+        buttonStyle : UIButtonStyle? = UIButtonStyle(inputWidth: 200.0, inputHeight: 30.0, inputRadius: 5, backgroundColor: .systemBlue, textColor: .white, tintColor: .white),
         action: UIAction = UIAction { _ in }
     ) -> iFormButtonItem {
         return iFormButtonItem(
