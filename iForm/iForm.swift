@@ -39,6 +39,7 @@ public class iForm {
         passwordTextField.display(on: view)
         loginButton.display(on: view)
         
+    
         return view
         
     }
@@ -66,6 +67,32 @@ public class iForm {
                 return getAllTextFields(from: view)
             }
         }.flatMap({$0})
+    }
+    
+    
+    public func initTextField(
+        placeholder: String? = "",
+        text: String? = "",
+        textColor: UIColor? = .darkText,
+        backgroundColor: UIColor? = .lightGray,
+        constraints: Constraints? = Constraints(horizontal: 0, vertical: 0, width: 200, height: 20),
+        contentType: iFormTextFieldContentType? = .normal,
+        keyboardType: iFormTextFieldKeyboardType? = .normal
+    ) -> UIView {
+        let textField = iFormTextFieldItem(placeholder: placeholder, text: text, textColor: textColor, backgroundColor: backgroundColor, constraints: constraints, contentType: contentType, keyboardType: keyboardType)
+        let view = UIView(frame: CGRect(x: textField.constraints!.getVertical(), y: textField.constraints!.getHorizontal(), width: textField.constraints!.getWidth()!, height: textField.constraints!.getHeight()!))
+       
+        return view
+    }
+    
+    public func initButton(
+        text: String? = "",
+        textColor: UIColor? = .darkText,
+        backgroundColor: UIColor? = .lightGray,
+        constraints: Constraints? = Constraints(horizontal: 0, vertical: 0, width: 200, height: 50),
+        action: UIAction
+    ) -> iFormButtonItem {
+        return iFormButtonItem(text: text, textColor: textColor, backgroundColor: backgroundColor, constraints: constraints, action: action)
     }
     
 }
