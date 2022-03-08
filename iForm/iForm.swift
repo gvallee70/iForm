@@ -20,15 +20,15 @@ public class iForm {
     ) -> SignInForm {
         self.signInForm.emailTextField = self.initTextField(
             placeholder: "Email",
-            backgroundColor: .white,
             contentType: .email,
-            keyboardType: .email
+            keyboardType: .email,
+            textFieldStyle: textfieldStyle ?? UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
         )
 
         self.signInForm.passwordTextField = self.initTextField(
             placeholder: "Password",
-            backgroundColor: .white,
-            contentType: .password
+            contentType: .password,
+            textFieldStyle: textfieldStyle ?? UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
         )
 
         
@@ -51,19 +51,16 @@ public class iForm {
     public func initTextField(
         placeholder: String = "",
         text: String = "",
-        textColor: UIColor = .darkText,
-        backgroundColor: UIColor = .lightGray,
         contentType: iFormTextFieldContentType = .normal,
-        keyboardType: iFormTextFieldKeyboardType = .normal
-        textFieldStyle : UITextFieldStyle? = UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: <#T##Double#>, backgroundColor: .white, textColor: .black, tintColor: .white)
+        keyboardType: iFormTextFieldKeyboardType = .normal,
+        textFieldStyle : UITextFieldStyle = UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
     ) -> iFormTextFieldItem {
         return iFormTextFieldItem(
             placeholder: placeholder,
             text: text,
-            textColor: textColor,
-            backgroundColor: backgroundColor,
             contentType: contentType,
-            keyboardType: keyboardType
+            keyboardType: keyboardType,
+            textFieldStyle: textFieldStyle
         )
     }
     

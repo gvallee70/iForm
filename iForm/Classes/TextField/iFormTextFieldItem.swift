@@ -12,27 +12,26 @@ public class iFormTextFieldItem: UITextField {
     public private(set) var textField: UITextField = UITextField()
     
     public init(
-        frame: CGRect = CGRect(x: 0, y: 0, width: 200, height: 50),
         placeholder: String = "",
         text: String = "",
-        textColor: UIColor = UIColor.black,
-        backgroundColor: UIColor = UIColor.lightGray,
         contentType: iFormTextFieldContentType = .normal,
-        keyboardType: iFormTextFieldKeyboardType = .normal) {
-            super.init(frame: frame)
+        keyboardType: iFormTextFieldKeyboardType = .normal,
+        textFieldStyle : UITextFieldStyle =  UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
+        ) {
+            super.init(frame: CGRect(x: 0, y: 0, width: textFieldStyle.inputWidth, height: textFieldStyle.inputHeight))
             
             self.textField = UITextField(frame: frame)
             
             self.setText(text)
-            self.setTextColor(textColor)
+            self.setTextColor(textFieldStyle.textColor)
             self.setPlaceholder(placeholder)
-            self.setBackgroundColor(backgroundColor)
+            self.setBackgroundColor(textFieldStyle.backgroundColor)
             self.setKeyboardType(keyboardType)
             self.setTextContentType(contentType)
             
             //Styling textField default layer
-            self.textField.layer.cornerRadius   = CGFloat(5.0)
-            self.textField.addLeftPadding(paddingValue: 10.0)
+            self.textField.layer.cornerRadius   = CGFloat(textFieldStyle.inputRadius)
+            self.textField.addLeftPadding(paddingValue: textFieldStyle.padding)
            
         }
     
@@ -72,6 +71,10 @@ public class iFormTextFieldItem: UITextField {
     
     public func setBackgroundColor(_ color: UIColor) {
         self.textField.backgroundColor = color
+    }
+    
+    public func setTintColor(_ color: UIColor) {
+        self.textField.tintColor = color
     }
     
     public func setConstraints(parentView: UIView, _ constraints: Constraints) {
