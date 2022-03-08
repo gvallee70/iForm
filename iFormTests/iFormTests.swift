@@ -30,17 +30,16 @@ class iFormTests: XCTestCase {
     func testSetPlaceholderMethod() throws {
         let textfield = form.initTextField(placeholder: "TestFalse")
         textfield.setPlaceholder("Test")
-        
-        XCTAssertFalse(textfield.placeholderText == "TestFalse")
-        XCTAssertTrue(textfield.placeholderText == "Test")
+        XCTAssertFalse(textfield.textField.placeholder == "TestFalse")
+        XCTAssertTrue(textfield.textField.placeholder == "Test")
     }
 
     func testSetTextMethod() throws {
         let button = form.initButton(text: "TestFalse")
         button.setText("Test")
         
-        XCTAssertFalse(button.txt == "TestFalse")
-        XCTAssertTrue(button.txt == "Test")
+        XCTAssertFalse(button.titleLabel?.text == "TestFalse")
+        XCTAssertTrue(button.titleLabel?.text == "Test")
     }
     
     
@@ -48,16 +47,16 @@ class iFormTests: XCTestCase {
         let button = form.initButton(backgroundColor: .blue)
         button.setBackgroundColor(.red)
         
-        XCTAssertFalse(button.bcgColor == .blue)
-        XCTAssertTrue(button.bcgColor == .red)
+        XCTAssertFalse(button.backgroundColor == .blue)
+        XCTAssertTrue(button.backgroundColor == .red)
     }
     
     func testSetTextColorMethod() throws {
         let textfield = form.initTextField(textColor: .blue)
         textfield.setTextColor(.red)
         
-        XCTAssertFalse(textfield.txtColor == .blue)
-        XCTAssertTrue(textfield.txtColor == .red)
+        XCTAssertFalse(textfield.textColor == .blue)
+        XCTAssertTrue(textfield.textColor == .red)
     }
     
 

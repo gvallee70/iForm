@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class iFormTextFieldItem: UITextField {
+public class iFormTextFieldItem: UITextField, iFormDelegate {
     public private(set) var textField: UITextField = UITextField()
     
     public init(
@@ -31,21 +31,12 @@ public class iFormTextFieldItem: UITextField {
             self.setTextContentType(contentType)
             
             //Styling textField default layer
-            self.textField.layer.cornerRadius   = CGFloat(5.0)
             self.textField.addLeftPadding(paddingValue: 10.0)
            
         }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-    }
-    
-    
-    public func display(on view: UIView, withConstraints constraints: Constraints = Constraints(horizontal: 0, vertical: 0, width: 200, height: 20)) {
-        
-        view.addSubview(self.textField)
-        self.setConstraints(parentView: view, constraints)
-           
     }
     
         
@@ -62,6 +53,15 @@ public class iFormTextFieldItem: UITextField {
         self.textField.keyboardType = keyboardType.rawValue
     }
     
+    //iForm delegate
+    
+    public func display(on view: UIView, withConstraints constraints: Constraints = Constraints(horizontal: 0, vertical: 0, width: 200, height: 20)) {
+        
+        view.addSubview(self.textField)
+        self.setConstraints(parentView: view, constraints)
+           
+    }
+    
     public func setText(_ text: String) {
         self.textField.text = text
     }
@@ -73,6 +73,11 @@ public class iFormTextFieldItem: UITextField {
     public func setBackgroundColor(_ color: UIColor) {
         self.textField.backgroundColor = color
     }
+    
+    public func setBorderRadius(_ radius: CGFloat) {
+        self.textField.layer.cornerRadius = radius
+    }
+    
     
     public func setConstraints(parentView: UIView, _ constraints: Constraints) {
         self.textField.translatesAutoresizingMaskIntoConstraints = false
