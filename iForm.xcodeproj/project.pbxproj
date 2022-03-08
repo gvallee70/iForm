@@ -114,6 +114,7 @@
 		BE2E90B727D27665006E1104 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BE938FE327B6A73700F544B2 /* iForm.swift */,
 				57EA01DB27D6CA2900A3C0D0 /* InputStyle */,
 				BE2E90D127D658FA006E1104 /* SignInForm */,
 				BE2E90BF27D3C819006E1104 /* Button */,
@@ -222,7 +223,6 @@
 				BE2E90B727D27665006E1104 /* Classes */,
 				BE938FCC27B6A66100F544B2 /* iForm.h */,
 				BE938FCD27B6A66100F544B2 /* iForm.docc */,
-				BE938FE327B6A73700F544B2 /* iForm.swift */,
 			);
 			path = iForm;
 			sourceTree = "<group>";
