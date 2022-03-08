@@ -45,7 +45,7 @@ Method used to create a  Button
 | Argument | Type | Description |
 | --- | --- | --- |
 | text | String | text field’s placeholder |
-| buttonStyle | UIButtonStyle | Style of t |
+| buttonStyle | UIButtonStyle | Style of the button |
 | action | UIAction | Callback performed by the button |
 
 ## **getAllTextFields → [UITextFields]**
