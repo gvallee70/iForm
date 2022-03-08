@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 public class iFormButtonItem: UIButton, iFormDelegate {
-    private var button: UIButton = UIButton()
+    public private(set) var button: UIButton = UIButton()
     
     @available(iOS 14.0, *)
     public init(
@@ -49,7 +49,7 @@ public class iFormButtonItem: UIButton, iFormDelegate {
     }
     
     public func setTextColor(_ color: UIColor) {
-        self.button.titleLabel?.textColor = color
+        self.button.setTitleColor(color, for: .normal)
     }
     
     public func setBackgroundColor(_ color: UIColor) {
@@ -80,5 +80,28 @@ public class iFormButtonItem: UIButton, iFormDelegate {
         self.button.layer.borderWidth = width
     }
     
+    public func getText() -> String? {
+        return self.button.currentTitle
+    }
+    
+    public func getTextColor() -> UIColor {
+        return self.button.currentTitleColor
+    }
+    
+    public func getBackgroundColor() -> UIColor? {
+        return self.button.backgroundColor
+    }
+    
+    public func getBorderRadius() -> CGFloat {
+        return self.button.layer.cornerRadius
+    }
+    
+    public func getBorderColor() -> CGColor? {
+        return self.button.layer.borderColor
+    }
+    
+    public func getBorderWidth() -> CGFloat {
+        return self.button.layer.borderWidth
+    }
 }
 

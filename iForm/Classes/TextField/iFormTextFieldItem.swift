@@ -97,6 +97,34 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
         
         parentView.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
     }
+    
+    public func getText() -> String? {
+        return self.textField.text
+    }
+    
+    public func getPlaceholder() -> String? {
+        return self.textField.placeholder
+    }
+    
+    public func getTextColor() -> UIColor {
+        return self.textField.textColor ?? .lightGray
+    }
+    
+    public func getBackgroundColor() -> UIColor? {
+        return self.textField.backgroundColor
+    }
+    
+    public func getBorderRadius() -> CGFloat {
+        return self.textField.layer.cornerRadius
+    }
+    
+    public func getTextContentType() -> UITextContentType {
+        return self.textField.textContentType
+    }
+    
+    public func getKeyboardType() -> UIKeyboardType {
+        return self.textField.keyboardType
+    }
  
 }
 

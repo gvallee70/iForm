@@ -16,4 +16,9 @@ public protocol iFormDelegate {
     func setConstraints(parentView: UIView, _ constraints: Constraints)
     func setBorderRadius(_ radius: CGFloat)
     func display(on view: UIView, withConstraints constraints: Constraints)
+    
+    func getText() -> String?
+    func getTextColor() -> UIColor
+    func getBackgroundColor() -> UIColor?
+    func getBorderRadius() -> CGFloat
 }

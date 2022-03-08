@@ -15,11 +15,9 @@ class iFormTests: XCTestCase {
         super.setUp()
     
         continueAfterFailure = false
-        
-        
     }
 
-
+    //SignInForm TEST
     func testNumberOfViewsOfSignInForm() throws {
         let signInForm = form.initSignInForm()
         
@@ -27,37 +25,80 @@ class iFormTests: XCTestCase {
         XCTAssertEqual(signInForm.subviews.count, 3)
     }
     
+    
+    //iFormTextFieldItem TEST
     func testSetPlaceholderMethod() throws {
         let textfield = form.initTextField(placeholder: "TestFalse")
         textfield.setPlaceholder("Test")
-        XCTAssertFalse(textfield.textField.placeholder == "TestFalse")
-        XCTAssertTrue(textfield.textField.placeholder == "Test")
+        XCTAssertFalse(textfield.getPlaceholder() == "TestFalse")
+        XCTAssertTrue(textfield.getPlaceholder() == "Test")
     }
-
+    
+    func testSetTextColorMethod() throws {
+        let textfield = form.initTextField()
+        textfield.setTextColor(.red)
+        
+        XCTAssertFalse(textfield.getTextColor() == .blue)
+        XCTAssertTrue(textfield.getTextColor() == .red)
+    }
+    
+    
+    func testSetBorderRadiusMethod() throws {
+        let textfield = form.initTextField()
+        textfield.setBorderRadius(CGFloat(10))
+        
+        XCTAssertFalse(textfield.getBorderRadius() == CGFloat(15))
+        XCTAssertTrue(textfield.getBorderRadius() == CGFloat(10))
+    }
+    
+    func testSetKeyboardTypeMethod() throws {
+        let textfield = form.initTextField()
+        textfield.setKeyboardType(.email)
+        
+        XCTAssertFalse(textfield.getKeyboardType() == iFormTextFieldKeyboardType.phone.rawValue)
+        XCTAssertTrue(textfield.getKeyboardType() == iFormTextFieldKeyboardType.email.rawValue)
+    }
+    
+    func testSetTextContentTypeMethod() throws {
+        let textfield = form.initTextField()
+        textfield.setTextContentType(.email)
+        
+        XCTAssertFalse(textfield.getTextContentType() == iFormTextFieldContentType.phoneNumber.rawValue)
+        XCTAssertTrue(textfield.getTextContentType() == iFormTextFieldContentType.email.rawValue)
+    }
+    
+    
+    //iFormButton
     func testSetTextMethod() throws {
         let button = form.initButton(text: "TestFalse")
         button.setText("Test")
-        
-        XCTAssertFalse(button.titleLabel?.text == "TestFalse")
-        XCTAssertTrue(button.titleLabel?.text == "Test")
+
+        XCTAssertFalse(button.getText() == "TestFalse")
+        XCTAssertTrue(button.getText() == "Test")
     }
     
     
     func testSetBackgroundColorMethod() throws {
-        let button = form.initButton(backgroundColor: .blue)
+        let button = form.initButton()
         button.setBackgroundColor(.red)
         
-        XCTAssertFalse(button.backgroundColor == .blue)
-        XCTAssertTrue(button.backgroundColor == .red)
+        XCTAssertFalse(button.getBackgroundColor() == .blue)
+        XCTAssertTrue(button.getBackgroundColor() == .red)
     }
-    
-    func testSetTextColorMethod() throws {
-        let textfield = form.initTextField(textColor: .blue)
-        textfield.setTextColor(.red)
-        
-        XCTAssertFalse(textfield.textColor == .blue)
-        XCTAssertTrue(textfield.textColor == .red)
-    }
-    
 
+    func testSetBorderColorMethod() throws {
+        let button = form.initButton()
+        button.setBorderColor(.red)
+        
+        XCTAssertFalse(button.getBorderColor() == UIColor.blue.cgColor)
+        XCTAssertTrue(button.getBorderColor() == UIColor.red.cgColor)
+    }
+
+    func testSetBorderWidthMethod() throws {
+        let button = form.initButton()
+        button.setBorderWidth(CGFloat(5))
+        
+        XCTAssertFalse(button.getBorderWidth() == CGFloat(10))
+        XCTAssertTrue(button.getBorderWidth() == CGFloat(5))
+    }
 }
