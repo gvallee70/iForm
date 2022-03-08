@@ -16,4 +16,4 @@ jobs:
     - name: Build
       run: xcodebuild build -destination 'name=iPhone 11' -scheme 'iForm'
     - name: Run tests
-      run: xcodebuild build -destination 'name=iPhone 11' -scheme 'iForm'
+      run: xcodebuild test -destination 'name=iPhone 11' -scheme 'iForm'
