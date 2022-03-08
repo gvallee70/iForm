@@ -15,7 +15,7 @@ public class iForm {
     
     public func initSignInForm(
         actionToPerform : UIAction = UIAction { _ in },
-        textfieldStyle : UITextFieldStyle = UITextFieldStyle(inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .darkGray, tintColor: .black, placeholderColor: .white),
+        textfieldStyle : UITextFieldStyle = UITextFieldStyle(inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .darkGray, tintColor: .black, placeholderColor: .darkGray),
         buttonStyle : UIButtonStyle = UIButtonStyle(inputRadius: 5, backgroundColor: .systemBlue, textColor: .white, tintColor: .white, borderColor : .white, borderWidth : 1.0)
     ) -> SignInForm {
         self.signInForm.emailTextField = self.initTextField(
@@ -40,7 +40,7 @@ public class iForm {
         
         self.signInForm.emailTextField.display(on: self.signInForm, withConstraints: Constraints(horizontal: 0, vertical: 0, width: 200, height: 30))
         self.signInForm.passwordTextField.display(on: self.signInForm, withConstraints: Constraints(horizontal: 0, vertical: 50, width: 200, height: 30))
-        self.signInForm.signInButton.display(on: self.signInForm, withConstraints: Constraints(horizontal: 0, vertical: 150, width: 200, height: 30))
+        self.signInForm.signInButton.display(on: self.signInForm, withConstraints: Constraints(horizontal: 0, vertical: 150, width: 200, height: 60))
 
         return signInForm
     }
@@ -51,7 +51,7 @@ public class iForm {
         text: String = "",
         contentType: iFormTextFieldContentType = .normal,
         keyboardType: iFormTextFieldKeyboardType = .normal,
-        textFieldStyle : UITextFieldStyle = UITextFieldStyle(inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white, placeholderColor : .darkGray)
+        textFieldStyle : UITextFieldStyle = UITextFieldStyle(inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .darkGray, tintColor: .white, placeholderColor : .darkGray)
     ) -> iFormTextFieldItem {
     
         return iFormTextFieldItem(
