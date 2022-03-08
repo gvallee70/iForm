@@ -12,19 +12,23 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
     public private(set) var textField: UITextField = UITextField()
     
     public init(
+        frame : CGRect = CGRect(x: 0, y: 0, width: 100, height: 30),
         placeholder: String = "",
         text: String = "",
         contentType: iFormTextFieldContentType = .normal,
         keyboardType: iFormTextFieldKeyboardType = .normal,
-        textFieldStyle : UITextFieldStyle =  UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
+        textFieldStyle : UITextFieldStyle =  UITextFieldStyle(inputRadius: 10, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white, placeholderColor : .darkGray)
         ) {
-            super.init(frame: CGRect(x: 0, y: 0, width: textFieldStyle.inputWidth, height: textFieldStyle.inputHeight))
+            super.init(frame: frame)
             
             self.textField = UITextField(frame: frame)
             
+            self.textField.attributedPlaceholder = NSAttributedString(
+                string : placeholder,
+                attributes : [NSAttributedString.Key.foregroundColor: textFieldStyle.placeholderColor])
+            
             self.setText(text)
             self.setTextColor(textFieldStyle.textColor)
-            self.setPlaceholder(placeholder)
             self.setBackgroundColor(textFieldStyle.backgroundColor)
             self.setKeyboardType(keyboardType)
             self.setTextContentType(contentType)

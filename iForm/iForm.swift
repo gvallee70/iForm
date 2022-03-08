@@ -22,20 +22,19 @@ public class iForm {
             placeholder: "Email",
             contentType: .email,
             keyboardType: .email,
-            textFieldStyle: textfieldStyle ?? UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
+            textFieldStyle: textfieldStyle ?? UITextFieldStyle(inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white, placeholderColor : .darkGray)
         )
 
         self.signInForm.passwordTextField = self.initTextField(
             placeholder: "Password",
             contentType: .password,
-            textFieldStyle: textfieldStyle ?? UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
+            textFieldStyle: textfieldStyle ?? UITextFieldStyle(inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white, placeholderColor : .darkGray)
         )
 
         
         self.signInForm.signInButton = self.initButton(
             text: "Sign In",
-            textColor: .darkGray,
-            backgroundColor: .lightGray,
+            buttonStyle: buttonStyle ?? UIButtonStyle(inputRadius: 5, backgroundColor: .systemBlue, textColor: .white, tintColor: .white, borderColor : .white, borderWidth : 1.0),
             action: actionToPerform
         )
         
@@ -52,8 +51,9 @@ public class iForm {
         text: String = "",
         contentType: iFormTextFieldContentType = .normal,
         keyboardType: iFormTextFieldKeyboardType = .normal,
-        textFieldStyle : UITextFieldStyle = UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
+        textFieldStyle : UITextFieldStyle = UITextFieldStyle(inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white, placeholderColor : .darkGray)
     ) -> iFormTextFieldItem {
+    
         return iFormTextFieldItem(
             placeholder: placeholder,
             text: text,
@@ -61,21 +61,19 @@ public class iForm {
             keyboardType: keyboardType,
             textFieldStyle: textFieldStyle
         )
+        
     }
     
     
     
     public func initButton(
         text: String = "",
-        textColor: UIColor = .darkText,
-        backgroundColor: UIColor = .lightGray,
-        buttonStyle : UIButtonStyle? = UIButtonStyle(inputWidth: 200.0, inputHeight: 30.0, inputRadius: 5, backgroundColor: .systemBlue, textColor: .white, tintColor: .white),
+        buttonStyle : UIButtonStyle = UIButtonStyle(inputRadius: 5, backgroundColor: .systemBlue, textColor: .white, tintColor: .white, borderColor : .white, borderWidth : 1.0),
         action: UIAction = UIAction { _ in }
     ) -> iFormButtonItem {
         return iFormButtonItem(
             text: text,
-            textColor: textColor,
-            backgroundColor: backgroundColor,
+            buttonStyle: buttonStyle,
             action: action
         )
     }

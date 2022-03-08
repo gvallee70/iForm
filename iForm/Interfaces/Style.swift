@@ -10,8 +10,6 @@ import UIKit
 
 protocol Style {
     
-    var inputWidth      : Double {get set}
-    var inputHeight     : Double {get set}
     var inputRadius     : Double {get set}
     var backgroundColor : UIColor {get set}
     var textColor       : UIColor {get set}
