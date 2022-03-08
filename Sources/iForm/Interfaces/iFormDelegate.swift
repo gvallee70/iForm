@@ -5,9 +5,7 @@
 //  Created by Gwendal on 04/03/2022.
 //
 
-import Foundation
 import UIKit
-
 
 public protocol iFormDelegate {
     func setText(_ text: String)

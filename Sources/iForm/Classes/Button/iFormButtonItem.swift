@@ -5,7 +5,6 @@
 //  Created by Gwendal on 05/03/2022.
 //
 
-import Foundation
 import UIKit
 
 public class iFormButtonItem: UIButton, iFormDelegate {

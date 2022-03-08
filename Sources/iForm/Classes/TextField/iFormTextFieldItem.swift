@@ -5,7 +5,6 @@
 //  Created by Gwendal on 11/02/2022.
 //
 
-import Foundation
 import UIKit
 
 public class iFormTextFieldItem: UITextField, iFormDelegate {

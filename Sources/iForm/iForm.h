@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 //! Project version number for iForm.
 FOUNDATION_EXPORT double iFormVersionNumber;

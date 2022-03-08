@@ -5,7 +5,6 @@
 //  Created by Nicolas TRAN on 08/03/2022.
 //
 
-import Foundation
 import UIKit
 
 protocol Style {

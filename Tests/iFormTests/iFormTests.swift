@@ -8,7 +8,8 @@
 import XCTest
 @testable import iForm
 
-class iFormTests: XCTestCase {
+@available(iOS 14.0, *)
+final class iFormTests: XCTestCase {
     let form = iForm()
 
     override func setUp() {

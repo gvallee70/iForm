@@ -1,627 +1,785 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 55;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		57EA01D227D6AFC700A3C0D0 /* light.json in Resources */ = {isa = PBXBuildFile; fileRef = 57EA01D127D6AFC700A3C0D0 /* light.json */; };
-		57EA01D827D6C8CE00A3C0D0 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA01D727D6C8CE00A3C0D0 /* Style.swift */; };
-		57EA01DD27D6CA4700A3C0D0 /* UIButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA01DC27D6CA4700A3C0D0 /* UIButtonStyle.swift */; };
-		57EA01DF27D6CB6C00A3C0D0 /* UITextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EA01DE27D6CB6C00A3C0D0 /* UITextfieldStyle.swift */; };
-		BE2E90B227D2351C006E1104 /* iFormTextFieldKeyboardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B127D2351C006E1104 /* iFormTextFieldKeyboardType.swift */; };
-		BE2E90B427D2354C006E1104 /* iFormTextFieldContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B327D2354C006E1104 /* iFormTextFieldContentType.swift */; };
-		BE2E90B627D2661E006E1104 /* iFormDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90B527D2661E006E1104 /* iFormDelegate.swift */; };
-		BE2E90BC27D276D5006E1104 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90BB27D276D5006E1104 /* Dimensions.swift */; };
-		BE2E90BE27D276EC006E1104 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90BD27D276EC006E1104 /* Constraints.swift */; };
-		BE2E90C127D3C830006E1104 /* iFormButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90C027D3C830006E1104 /* iFormButtonItem.swift */; };
-		BE2E90D327D65913006E1104 /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90D227D65913006E1104 /* SignInForm.swift */; };
-		BE6F118427D6F4330007C17E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BE6F117927D6F4330007C17E /* Podfile */; };
-		BE6F118727D6F4330007C17E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BE6F118027D6F4330007C17E /* LICENSE */; };
-		BE6F118827D6F4330007C17E /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F118127D6F4330007C17E /* Package.swift */; };
-		BE6F118927D6F4330007C17E /* iForm.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BE6F118227D6F4330007C17E /* iForm.podspec */; };
-		BE6F118A27D6F4330007C17E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BE6F118327D6F4330007C17E /* README.md */; };
-		BE8F937827D6F90C002D6EDF /* iFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE938FD827B6A66100F544B2 /* iFormTests.swift */; };
-		BE938FCE27B6A66100F544B2 /* iForm.docc in Sources */ = {isa = PBXBuildFile; fileRef = BE938FCD27B6A66100F544B2 /* iForm.docc */; };
-		BE938FD427B6A66100F544B2 /* iForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE938FC927B6A66000F544B2 /* iForm.framework */; };
-		BE938FDA27B6A66100F544B2 /* iForm.h in Headers */ = {isa = PBXBuildFile; fileRef = BE938FCC27B6A66100F544B2 /* iForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE938FE427B6A73700F544B2 /* iForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE938FE327B6A73700F544B2 /* iForm.swift */; };
-		BE938FEA27B6AAEA00F544B2 /* iFormTextFieldItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE938FE927B6AAEA00F544B2 /* iFormTextFieldItem.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BE938FD527B6A66100F544B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE938FC027B6A66000F544B2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BE938FC827B6A66000F544B2;
-			remoteInfo = iForm;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		57EA01D127D6AFC700A3C0D0 /* light.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = light.json; sourceTree = "<group>"; };
-		57EA01D727D6C8CE00A3C0D0 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		57EA01DC27D6CA4700A3C0D0 /* UIButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonStyle.swift; sourceTree = "<group>"; };
-		57EA01DE27D6CB6C00A3C0D0 /* UITextfieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextfieldStyle.swift; sourceTree = "<group>"; };
-		BE2E90B127D2351C006E1104 /* iFormTextFieldKeyboardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormTextFieldKeyboardType.swift; sourceTree = "<group>"; };
-		BE2E90B327D2354C006E1104 /* iFormTextFieldContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormTextFieldContentType.swift; sourceTree = "<group>"; };
-		BE2E90B527D2661E006E1104 /* iFormDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormDelegate.swift; sourceTree = "<group>"; };
-		BE2E90BB27D276D5006E1104 /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
-		BE2E90BD27D276EC006E1104 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
-		BE2E90C027D3C830006E1104 /* iFormButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormButtonItem.swift; sourceTree = "<group>"; };
-		BE2E90D227D65913006E1104 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
-		BE6F117927D6F4330007C17E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		BE6F118027D6F4330007C17E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		BE6F118127D6F4330007C17E /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		BE6F118227D6F4330007C17E /* iForm.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iForm.podspec; sourceTree = "<group>"; };
-		BE6F118327D6F4330007C17E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		BE938FC927B6A66000F544B2 /* iForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE938FCC27B6A66100F544B2 /* iForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iForm.h; sourceTree = "<group>"; };
-		BE938FCD27B6A66100F544B2 /* iForm.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iForm.docc; sourceTree = "<group>"; };
-		BE938FD327B6A66100F544B2 /* iFormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iFormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE938FD827B6A66100F544B2 /* iFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iFormTests.swift; path = ../../iFormTests/iFormTests.swift; sourceTree = "<group>"; };
-		BE938FE327B6A73700F544B2 /* iForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iForm.swift; sourceTree = "<group>"; };
-		BE938FE927B6AAEA00F544B2 /* iFormTextFieldItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormTextFieldItem.swift; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		BE938FC627B6A66000F544B2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE938FD027B6A66100F544B2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE938FD427B6A66100F544B2 /* iForm.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		57EA01D027D6AF9600A3C0D0 /* Style */ = {
-			isa = PBXGroup;
-			children = (
-				57EA01D127D6AFC700A3C0D0 /* light.json */,
-			);
-			path = Style;
-			sourceTree = "<group>";
-		};
-		57EA01DB27D6CA2900A3C0D0 /* InputStyle */ = {
-			isa = PBXGroup;
-			children = (
-				57EA01DC27D6CA4700A3C0D0 /* UIButtonStyle.swift */,
-				57EA01DE27D6CB6C00A3C0D0 /* UITextfieldStyle.swift */,
-			);
-			path = InputStyle;
-			sourceTree = "<group>";
-		};
-		BE2E90B027D234EF006E1104 /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-				BE938FE927B6AAEA00F544B2 /* iFormTextFieldItem.swift */,
-			);
-			path = TextField;
-			sourceTree = "<group>";
-		};
-		BE2E90B727D27665006E1104 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				BE938FE327B6A73700F544B2 /* iForm.swift */,
-				57EA01DB27D6CA2900A3C0D0 /* InputStyle */,
-				BE2E90D127D658FA006E1104 /* SignInForm */,
-				BE2E90BF27D3C819006E1104 /* Button */,
-				BE2E90B027D234EF006E1104 /* TextField */,
-				BE2E90BB27D276D5006E1104 /* Dimensions.swift */,
-				BE2E90BD27D276EC006E1104 /* Constraints.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		BE2E90B827D27683006E1104 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				BE2E90B927D276A7006E1104 /* TextField */,
-			);
-			path = Enums;
-			sourceTree = "<group>";
-		};
-		BE2E90B927D276A7006E1104 /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-				BE2E90B127D2351C006E1104 /* iFormTextFieldKeyboardType.swift */,
-				BE2E90B327D2354C006E1104 /* iFormTextFieldContentType.swift */,
-			);
-			path = TextField;
-			sourceTree = "<group>";
-		};
-		BE2E90BA27D276C0006E1104 /* Interfaces */ = {
-			isa = PBXGroup;
-			children = (
-				BE2E90B527D2661E006E1104 /* iFormDelegate.swift */,
-				57EA01D727D6C8CE00A3C0D0 /* Style.swift */,
-			);
-			path = Interfaces;
-			sourceTree = "<group>";
-		};
-		BE2E90BF27D3C819006E1104 /* Button */ = {
-			isa = PBXGroup;
-			children = (
-				BE2E90C027D3C830006E1104 /* iFormButtonItem.swift */,
-			);
-			path = Button;
-			sourceTree = "<group>";
-		};
-		BE2E90D127D658FA006E1104 /* SignInForm */ = {
-			isa = PBXGroup;
-			children = (
-				BE2E90D227D65913006E1104 /* SignInForm.swift */,
-			);
-			path = SignInForm;
-			sourceTree = "<group>";
-		};
-		BE6F117A27D6F4330007C17E /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				BE938FCB27B6A66000F544B2 /* iForm */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		BE6F117D27D6F4330007C17E /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				BE6F117E27D6F4330007C17E /* iFormTests */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		BE6F117E27D6F4330007C17E /* iFormTests */ = {
-			isa = PBXGroup;
-			children = (
-				BE938FD827B6A66100F544B2 /* iFormTests.swift */,
-			);
-			path = iFormTests;
-			sourceTree = "<group>";
-		};
-		BE938FBF27B6A66000F544B2 = {
-			isa = PBXGroup;
-			children = (
-				BE6F118227D6F4330007C17E /* iForm.podspec */,
-				BE6F118027D6F4330007C17E /* LICENSE */,
-				BE6F118127D6F4330007C17E /* Package.swift */,
-				BE6F117927D6F4330007C17E /* Podfile */,
-				BE6F118327D6F4330007C17E /* README.md */,
-				BE6F117A27D6F4330007C17E /* Sources */,
-				BE6F117D27D6F4330007C17E /* Tests */,
-				BE938FCA27B6A66000F544B2 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		BE938FCA27B6A66000F544B2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BE938FC927B6A66000F544B2 /* iForm.framework */,
-				BE938FD327B6A66100F544B2 /* iFormTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BE938FCB27B6A66000F544B2 /* iForm */ = {
-			isa = PBXGroup;
-			children = (
-				57EA01D027D6AF9600A3C0D0 /* Style */,
-				BE2E90BA27D276C0006E1104 /* Interfaces */,
-				BE2E90B827D27683006E1104 /* Enums */,
-				BE2E90B727D27665006E1104 /* Classes */,
-				BE938FCC27B6A66100F544B2 /* iForm.h */,
-				BE938FCD27B6A66100F544B2 /* iForm.docc */,
-			);
-			path = iForm;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		BE938FC427B6A66000F544B2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE938FDA27B6A66100F544B2 /* iForm.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		BE938FC827B6A66000F544B2 /* iForm */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BE938FDD27B6A66100F544B2 /* Build configuration list for PBXNativeTarget "iForm" */;
-			buildPhases = (
-				BE938FC427B6A66000F544B2 /* Headers */,
-				BE938FC527B6A66000F544B2 /* Sources */,
-				BE938FC627B6A66000F544B2 /* Frameworks */,
-				BE938FC727B6A66000F544B2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = iForm;
-			productName = iForm;
-			productReference = BE938FC927B6A66000F544B2 /* iForm.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BE938FD227B6A66100F544B2 /* iFormTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BE938FE027B6A66100F544B2 /* Build configuration list for PBXNativeTarget "iFormTests" */;
-			buildPhases = (
-				BE938FCF27B6A66100F544B2 /* Sources */,
-				BE938FD027B6A66100F544B2 /* Frameworks */,
-				BE938FD127B6A66100F544B2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BE938FD627B6A66100F544B2 /* PBXTargetDependency */,
-			);
-			name = iFormTests;
-			productName = iFormTests;
-			productReference = BE938FD327B6A66100F544B2 /* iFormTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		BE938FC027B6A66000F544B2 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
-				TargetAttributes = {
-					BE938FC827B6A66000F544B2 = {
-						CreatedOnToolsVersion = 13.2.1;
-					};
-					BE938FD227B6A66100F544B2 = {
-						CreatedOnToolsVersion = 13.2.1;
-					};
-				};
-			};
-			buildConfigurationList = BE938FC327B6A66000F544B2 /* Build configuration list for PBXProject "iForm" */;
-			compatibilityVersion = "Xcode 13.0";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = BE938FBF27B6A66000F544B2;
-			productRefGroup = BE938FCA27B6A66000F544B2 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				BE938FC827B6A66000F544B2 /* iForm */,
-				BE938FD227B6A66100F544B2 /* iFormTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		BE938FC727B6A66000F544B2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE6F118727D6F4330007C17E /* LICENSE in Resources */,
-				BE6F118427D6F4330007C17E /* Podfile in Resources */,
-				BE6F118A27D6F4330007C17E /* README.md in Resources */,
-				BE6F118927D6F4330007C17E /* iForm.podspec in Resources */,
-				57EA01D227D6AFC700A3C0D0 /* light.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE938FD127B6A66100F544B2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		BE938FC527B6A66000F544B2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE2E90B627D2661E006E1104 /* iFormDelegate.swift in Sources */,
-				BE2E90C127D3C830006E1104 /* iFormButtonItem.swift in Sources */,
-				BE2E90B227D2351C006E1104 /* iFormTextFieldKeyboardType.swift in Sources */,
-				BE6F118827D6F4330007C17E /* Package.swift in Sources */,
-				BE2E90D327D65913006E1104 /* SignInForm.swift in Sources */,
-				BE938FCE27B6A66100F544B2 /* iForm.docc in Sources */,
-				BE938FEA27B6AAEA00F544B2 /* iFormTextFieldItem.swift in Sources */,
-				BE2E90BE27D276EC006E1104 /* Constraints.swift in Sources */,
-				BE2E90B427D2354C006E1104 /* iFormTextFieldContentType.swift in Sources */,
-				57EA01DF27D6CB6C00A3C0D0 /* UITextfieldStyle.swift in Sources */,
-				BE2E90BC27D276D5006E1104 /* Dimensions.swift in Sources */,
-				BE8F937827D6F90C002D6EDF /* iFormTests.swift in Sources */,
-				57EA01DD27D6CA4700A3C0D0 /* UIButtonStyle.swift in Sources */,
-				BE938FE427B6A73700F544B2 /* iForm.swift in Sources */,
-				57EA01D827D6C8CE00A3C0D0 /* Style.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE938FCF27B6A66100F544B2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BE938FD627B6A66100F544B2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BE938FC827B6A66000F544B2 /* iForm */;
-			targetProxy = BE938FD527B6A66100F544B2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		BE938FDB27B6A66100F544B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BE938FDC27B6A66100F544B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BE938FDE27B6A66100F544B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FQGP74M3NR;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.valdoutran.iForm;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BE938FDF27B6A66100F544B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FQGP74M3NR;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.valdoutran.iForm;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		BE938FE127B6A66100F544B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 32437GKU5J;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.valdoutran.iFormTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BE938FE227B6A66100F544B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 32437GKU5J;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.valdoutran.iFormTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		BE938FC327B6A66000F544B2 /* Build configuration list for PBXProject "iForm" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE938FDB27B6A66100F544B2 /* Debug */,
-				BE938FDC27B6A66100F544B2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BE938FDD27B6A66100F544B2 /* Build configuration list for PBXNativeTarget "iForm" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE938FDE27B6A66100F544B2 /* Debug */,
-				BE938FDF27B6A66100F544B2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BE938FE027B6A66100F544B2 /* Build configuration list for PBXNativeTarget "iFormTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BE938FE127B6A66100F544B2 /* Debug */,
-				BE938FE227B6A66100F544B2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = BE938FC027B6A66000F544B2 /* Project object */;
+   archiveVersion = "1";
+   objectVersion = "46";
+   objects = {
+      "OBJ_1" = {
+         isa = "PBXProject";
+         attributes = {
+            LastSwiftMigration = "9999";
+            LastUpgradeCheck = "9999";
+         };
+         buildConfigurationList = "OBJ_2";
+         compatibilityVersion = "Xcode 3.2";
+         developmentRegion = "en";
+         hasScannedForEncodings = "0";
+         knownRegions = (
+            "en"
+         );
+         mainGroup = "OBJ_5";
+         productRefGroup = "OBJ_33";
+         projectDirPath = ".";
+         targets = (
+            "iForm::iForm",
+            "iForm::SwiftPMPackageDescription",
+            "iForm::iFormPackageTests::ProductTarget",
+            "iForm::iFormTests"
+         );
+      };
+      "OBJ_10" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_11",
+            "OBJ_13",
+            "OBJ_14",
+            "OBJ_15",
+            "OBJ_18",
+            "OBJ_20",
+            "OBJ_22"
+         );
+         name = "Classes";
+         path = "Classes";
+         sourceTree = "<group>";
+      };
+      "OBJ_11" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_12"
+         );
+         name = "Button";
+         path = "Button";
+         sourceTree = "<group>";
+      };
+      "OBJ_12" = {
+         isa = "PBXFileReference";
+         path = "iFormButtonItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_13" = {
+         isa = "PBXFileReference";
+         path = "Constraints.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_14" = {
+         isa = "PBXFileReference";
+         path = "Dimensions.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_15" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_16",
+            "OBJ_17"
+         );
+         name = "InputStyle";
+         path = "InputStyle";
+         sourceTree = "<group>";
+      };
+      "OBJ_16" = {
+         isa = "PBXFileReference";
+         path = "UIButtonStyle.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_17" = {
+         isa = "PBXFileReference";
+         path = "UITextfieldStyle.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_18" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_19"
+         );
+         name = "SignInForm";
+         path = "SignInForm";
+         sourceTree = "<group>";
+      };
+      "OBJ_19" = {
+         isa = "PBXFileReference";
+         path = "SignInForm.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_2" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_3",
+            "OBJ_4"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_20" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_21"
+         );
+         name = "TextField";
+         path = "TextField";
+         sourceTree = "<group>";
+      };
+      "OBJ_21" = {
+         isa = "PBXFileReference";
+         path = "iFormTextFieldItem.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_22" = {
+         isa = "PBXFileReference";
+         path = "iForm.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_23" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_24"
+         );
+         name = "Enums";
+         path = "Enums";
+         sourceTree = "<group>";
+      };
+      "OBJ_24" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_25",
+            "OBJ_26"
+         );
+         name = "TextField";
+         path = "TextField";
+         sourceTree = "<group>";
+      };
+      "OBJ_25" = {
+         isa = "PBXFileReference";
+         path = "iFormTextFieldContentType.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_26" = {
+         isa = "PBXFileReference";
+         path = "iFormTextFieldKeyboardType.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_27" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_28",
+            "OBJ_29"
+         );
+         name = "Interfaces";
+         path = "Interfaces";
+         sourceTree = "<group>";
+      };
+      "OBJ_28" = {
+         isa = "PBXFileReference";
+         path = "Style.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_29" = {
+         isa = "PBXFileReference";
+         path = "iFormDelegate.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_3" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "NO";
+            DEBUG_INFORMATION_FORMAT = "dwarf";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            ENABLE_NS_ASSERTIONS = "YES";
+            GCC_OPTIMIZATION_LEVEL = "0";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1",
+               "DEBUG=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            ONLY_ACTIVE_ARCH = "YES";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "$(AVAILABLE_PLATFORMS)"
+            );
+            SUPPORTS_MACCATALYST = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE",
+               "DEBUG"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Debug";
+      };
+      "OBJ_30" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_31"
+         );
+         name = "Tests";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_31" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_32"
+         );
+         name = "iFormTests";
+         path = "Tests/iFormTests";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_32" = {
+         isa = "PBXFileReference";
+         path = "iFormTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_33" = {
+         isa = "PBXGroup";
+         children = (
+            "iForm::iForm::Product",
+            "iForm::iFormTests::Product"
+         );
+         name = "Products";
+         path = "";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "OBJ_36" = {
+         isa = "PBXFileReference";
+         path = "DerivedData";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_37" = {
+         isa = "PBXFileReference";
+         path = "iFormLib";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_38" = {
+         isa = "PBXFileReference";
+         path = "LICENSE";
+         sourceTree = "<group>";
+      };
+      "OBJ_39" = {
+         isa = "PBXFileReference";
+         path = "README.md";
+         sourceTree = "<group>";
+      };
+      "OBJ_4" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "YES";
+            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            GCC_OPTIMIZATION_LEVEL = "s";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "$(AVAILABLE_PLATFORMS)"
+            );
+            SUPPORTS_MACCATALYST = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Release";
+      };
+      "OBJ_40" = {
+         isa = "PBXFileReference";
+         path = "iForm.podspec";
+         sourceTree = "<group>";
+      };
+      "OBJ_41" = {
+         isa = "PBXFileReference";
+         path = "Podfile";
+         sourceTree = "<group>";
+      };
+      "OBJ_43" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_44",
+            "OBJ_45"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_44" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CURRENT_PROJECT_VERSION = "1";
+            DRIVERKIT_DEPLOYMENT_TARGET = "19.0";
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "iForm.xcodeproj/iForm_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "14.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "iForm";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "iForm";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_45" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CURRENT_PROJECT_VERSION = "1";
+            DRIVERKIT_DEPLOYMENT_TARGET = "19.0";
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "iForm.xcodeproj/iForm_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "14.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "iForm";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "iForm";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_46" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_47",
+            "OBJ_48",
+            "OBJ_49",
+            "OBJ_50",
+            "OBJ_51",
+            "OBJ_52",
+            "OBJ_53",
+            "OBJ_54",
+            "OBJ_55",
+            "OBJ_56",
+            "OBJ_57",
+            "OBJ_58"
+         );
+      };
+      "OBJ_47" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_12";
+      };
+      "OBJ_48" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_13";
+      };
+      "OBJ_49" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_14";
+      };
+      "OBJ_5" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_6",
+            "OBJ_7",
+            "OBJ_30",
+            "OBJ_33",
+            "OBJ_36",
+            "OBJ_37",
+            "OBJ_38",
+            "OBJ_39",
+            "OBJ_40",
+            "OBJ_41"
+         );
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_50" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_16";
+      };
+      "OBJ_51" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_17";
+      };
+      "OBJ_52" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_19";
+      };
+      "OBJ_53" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_21";
+      };
+      "OBJ_54" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_22";
+      };
+      "OBJ_55" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_25";
+      };
+      "OBJ_56" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_26";
+      };
+      "OBJ_57" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_28";
+      };
+      "OBJ_58" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_29";
+      };
+      "OBJ_59" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_6" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         path = "Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_61" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_62",
+            "OBJ_63"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_62" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk",
+               "-package-description-version",
+               "5.5.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_63" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk",
+               "-package-description-version",
+               "5.5.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Release";
+      };
+      "OBJ_64" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_65"
+         );
+      };
+      "OBJ_65" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_6";
+      };
+      "OBJ_67" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_68",
+            "OBJ_69"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_68" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_69" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_7" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_8"
+         );
+         name = "Sources";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_70" = {
+         isa = "PBXTargetDependency";
+         target = "iForm::iFormTests";
+      };
+      "OBJ_72" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_73",
+            "OBJ_74"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_73" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            CURRENT_PROJECT_VERSION = "1";
+            DRIVERKIT_DEPLOYMENT_TARGET = "19.0";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "iForm.xcodeproj/iFormTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "14.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "11.0";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "iFormTests";
+            TVOS_DEPLOYMENT_TARGET = "14.0";
+            WATCHOS_DEPLOYMENT_TARGET = "7.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_74" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            CURRENT_PROJECT_VERSION = "1";
+            DRIVERKIT_DEPLOYMENT_TARGET = "19.0";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "iForm.xcodeproj/iFormTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "14.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "11.0";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "iFormTests";
+            TVOS_DEPLOYMENT_TARGET = "14.0";
+            WATCHOS_DEPLOYMENT_TARGET = "7.0";
+         };
+         name = "Release";
+      };
+      "OBJ_75" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_76"
+         );
+      };
+      "OBJ_76" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_32";
+      };
+      "OBJ_77" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_78"
+         );
+      };
+      "OBJ_78" = {
+         isa = "PBXBuildFile";
+         fileRef = "iForm::iForm::Product";
+      };
+      "OBJ_79" = {
+         isa = "PBXTargetDependency";
+         target = "iForm::iForm";
+      };
+      "OBJ_8" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_9",
+            "OBJ_10",
+            "OBJ_23",
+            "OBJ_27"
+         );
+         name = "iForm";
+         path = "Sources/iForm";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_9" = {
+         isa = "PBXFileReference";
+         path = "iForm.h";
+         sourceTree = "<group>";
+      };
+      "iForm::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_61";
+         buildPhases = (
+            "OBJ_64"
+         );
+         dependencies = (
+         );
+         name = "iFormPackageDescription";
+         productName = "iFormPackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "iForm::iForm" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_43";
+         buildPhases = (
+            "OBJ_46",
+            "OBJ_59"
+         );
+         dependencies = (
+         );
+         name = "iForm";
+         productName = "iForm";
+         productReference = "iForm::iForm::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "iForm::iForm::Product" = {
+         isa = "PBXFileReference";
+         path = "iForm.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "iForm::iFormPackageTests::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_67";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_70"
+         );
+         name = "iFormPackageTests";
+         productName = "iFormPackageTests";
+      };
+      "iForm::iFormTests" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_72";
+         buildPhases = (
+            "OBJ_75",
+            "OBJ_77"
+         );
+         dependencies = (
+            "OBJ_79"
+         );
+         name = "iFormTests";
+         productName = "iFormTests";
+         productReference = "iForm::iFormTests::Product";
+         productType = "com.apple.product-type.bundle.unit-test";
+      };
+      "iForm::iFormTests::Product" = {
+         isa = "PBXFileReference";
+         path = "iFormTests.xctest";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+   };
+   rootObject = "OBJ_1";
 }
