@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build
+    - name: Build for iOS 
       run: xcodebuild build -destination 'name=iPhone 11' -scheme 'iForm'
-    - name: Run tests
+    - name: Run iOS tests 
       run: xcodebuild test -destination 'name=iPhone 11' -scheme 'iForm'
