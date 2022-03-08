@@ -8,7 +8,7 @@
 import UIKit
 
 @available(iOS 14.0, *)
-public class SignInForm: UIView {
+open class SignInForm: UIView {
     public internal(set) var emailTextField: iFormTextFieldItem = iFormTextFieldItem()
     public internal(set) var passwordTextField: iFormTextFieldItem = iFormTextFieldItem()
     public internal(set) var signInButton: iFormButtonItem = iFormButtonItem()

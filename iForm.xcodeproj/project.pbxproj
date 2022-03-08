@@ -19,15 +19,13 @@
 		BE2E90C127D3C830006E1104 /* iFormButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90C027D3C830006E1104 /* iFormButtonItem.swift */; };
 		BE2E90D327D65913006E1104 /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2E90D227D65913006E1104 /* SignInForm.swift */; };
 		BE6F118427D6F4330007C17E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BE6F117927D6F4330007C17E /* Podfile */; };
-		BE6F118527D6F4330007C17E /* iForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F117C27D6F4330007C17E /* iForm.swift */; };
-		BE6F118627D6F4330007C17E /* iFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F117F27D6F4330007C17E /* iFormTests.swift */; };
 		BE6F118727D6F4330007C17E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BE6F118027D6F4330007C17E /* LICENSE */; };
 		BE6F118827D6F4330007C17E /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6F118127D6F4330007C17E /* Package.swift */; };
 		BE6F118927D6F4330007C17E /* iForm.podspec in Resources */ = {isa = PBXBuildFile; fileRef = BE6F118227D6F4330007C17E /* iForm.podspec */; };
 		BE6F118A27D6F4330007C17E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BE6F118327D6F4330007C17E /* README.md */; };
+		BE8F937827D6F90C002D6EDF /* iFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE938FD827B6A66100F544B2 /* iFormTests.swift */; };
 		BE938FCE27B6A66100F544B2 /* iForm.docc in Sources */ = {isa = PBXBuildFile; fileRef = BE938FCD27B6A66100F544B2 /* iForm.docc */; };
 		BE938FD427B6A66100F544B2 /* iForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE938FC927B6A66000F544B2 /* iForm.framework */; };
-		BE938FD927B6A66100F544B2 /* iFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE938FD827B6A66100F544B2 /* iFormTests.swift */; };
 		BE938FDA27B6A66100F544B2 /* iForm.h in Headers */ = {isa = PBXBuildFile; fileRef = BE938FCC27B6A66100F544B2 /* iForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE938FE427B6A73700F544B2 /* iForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE938FE327B6A73700F544B2 /* iForm.swift */; };
 		BE938FEA27B6AAEA00F544B2 /* iFormTextFieldItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE938FE927B6AAEA00F544B2 /* iFormTextFieldItem.swift */; };
@@ -56,8 +54,6 @@
 		BE2E90C027D3C830006E1104 /* iFormButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormButtonItem.swift; sourceTree = "<group>"; };
 		BE2E90D227D65913006E1104 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
 		BE6F117927D6F4330007C17E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		BE6F117C27D6F4330007C17E /* iForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iForm.swift; sourceTree = "<group>"; };
-		BE6F117F27D6F4330007C17E /* iFormTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iFormTests.swift; sourceTree = "<group>"; };
 		BE6F118027D6F4330007C17E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BE6F118127D6F4330007C17E /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		BE6F118227D6F4330007C17E /* iForm.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iForm.podspec; sourceTree = "<group>"; };
@@ -66,7 +62,7 @@
 		BE938FCC27B6A66100F544B2 /* iForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iForm.h; sourceTree = "<group>"; };
 		BE938FCD27B6A66100F544B2 /* iForm.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iForm.docc; sourceTree = "<group>"; };
 		BE938FD327B6A66100F544B2 /* iFormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iFormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE938FD827B6A66100F544B2 /* iFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormTests.swift; sourceTree = "<group>"; };
+		BE938FD827B6A66100F544B2 /* iFormTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iFormTests.swift; path = ../../iFormTests/iFormTests.swift; sourceTree = "<group>"; };
 		BE938FE327B6A73700F544B2 /* iForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iForm.swift; sourceTree = "<group>"; };
 		BE938FE927B6AAEA00F544B2 /* iFormTextFieldItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFormTextFieldItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,17 +169,9 @@
 		BE6F117A27D6F4330007C17E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				BE6F117B27D6F4330007C17E /* iForm */,
+				BE938FCB27B6A66000F544B2 /* iForm */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		BE6F117B27D6F4330007C17E /* iForm */ = {
-			isa = PBXGroup;
-			children = (
-				BE6F117C27D6F4330007C17E /* iForm.swift */,
-			);
-			path = iForm;
 			sourceTree = "<group>";
 		};
 		BE6F117D27D6F4330007C17E /* Tests */ = {
@@ -197,7 +185,7 @@
 		BE6F117E27D6F4330007C17E /* iFormTests */ = {
 			isa = PBXGroup;
 			children = (
-				BE6F117F27D6F4330007C17E /* iFormTests.swift */,
+				BE938FD827B6A66100F544B2 /* iFormTests.swift */,
 			);
 			path = iFormTests;
 			sourceTree = "<group>";
@@ -212,8 +200,6 @@
 				BE6F118327D6F4330007C17E /* README.md */,
 				BE6F117A27D6F4330007C17E /* Sources */,
 				BE6F117D27D6F4330007C17E /* Tests */,
-				BE938FCB27B6A66000F544B2 /* iForm */,
-				BE938FD727B6A66100F544B2 /* iFormTests */,
 				BE938FCA27B6A66000F544B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -239,14 +225,6 @@
 				BE938FE327B6A73700F544B2 /* iForm.swift */,
 			);
 			path = iForm;
-			sourceTree = "<group>";
-		};
-		BE938FD727B6A66100F544B2 /* iFormTests */ = {
-			isa = PBXGroup;
-			children = (
-				BE938FD827B6A66100F544B2 /* iFormTests.swift */,
-			);
-			path = iFormTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,7 +343,6 @@
 			files = (
 				BE2E90B627D2661E006E1104 /* iFormDelegate.swift in Sources */,
 				BE2E90C127D3C830006E1104 /* iFormButtonItem.swift in Sources */,
-				BE6F118627D6F4330007C17E /* iFormTests.swift in Sources */,
 				BE2E90B227D2351C006E1104 /* iFormTextFieldKeyboardType.swift in Sources */,
 				BE6F118827D6F4330007C17E /* Package.swift in Sources */,
 				BE2E90D327D65913006E1104 /* SignInForm.swift in Sources */,
@@ -375,8 +352,8 @@
 				BE2E90B427D2354C006E1104 /* iFormTextFieldContentType.swift in Sources */,
 				57EA01DF27D6CB6C00A3C0D0 /* UITextfieldStyle.swift in Sources */,
 				BE2E90BC27D276D5006E1104 /* Dimensions.swift in Sources */,
+				BE8F937827D6F90C002D6EDF /* iFormTests.swift in Sources */,
 				57EA01DD27D6CA4700A3C0D0 /* UIButtonStyle.swift in Sources */,
-				BE6F118527D6F4330007C17E /* iForm.swift in Sources */,
 				BE938FE427B6A73700F544B2 /* iForm.swift in Sources */,
 				57EA01D827D6C8CE00A3C0D0 /* Style.swift in Sources */,
 			);
@@ -386,7 +363,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE938FD927B6A66100F544B2 /* iFormTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
