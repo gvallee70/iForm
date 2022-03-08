@@ -1,0 +1,19 @@
+name: iForm
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: xcodebuild build -destination 'name=iPhone 11' -scheme 'iForm'
+    - name: Run tests
+      run: xcodebuild build -destination 'name=iPhone 11' -scheme 'iForm'
