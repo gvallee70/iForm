@@ -10,13 +10,10 @@ import UIKit
 
 
 public protocol iFormDelegate {
-    var txt: String? { get }
-    var txtColor: UIColor? { get }
-    var bcgColor: UIColor? { get }
-    var constr: Constraints? { get }
-
     func setText(_ text: String)
     func setTextColor(_ color: UIColor)
     func setBackgroundColor(_ color: UIColor)
-    func setConstraints(_ constraints: Constraints)
+    func setConstraints(parentView: UIView, _ constraints: Constraints)
+    func setBorderRadius(_ radius: CGFloat)
+    func display(on view: UIView, withConstraints constraints: Constraints)
 }

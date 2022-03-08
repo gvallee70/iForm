@@ -36,13 +36,12 @@ public class iForm {
             text: "Sign In",
             textColor: .darkGray,
             backgroundColor: .lightGray,
-            constraints: Constraints(horizontal: 0, vertical: 150, width: 200, height: 30),
             action: actionToPerform
         )
         
         self.signInForm.emailTextField.display(on: self.signInForm, withConstraints: Constraints(horizontal: 0, vertical: 0, width: 200, height: 30))
         self.signInForm.passwordTextField.display(on: self.signInForm, withConstraints: Constraints(horizontal: 0, vertical: 50, width: 200, height: 30))
-        self.signInForm.signInButton.display(on: self.signInForm)
+        self.signInForm.signInButton.display(on: self.signInForm, withConstraints: Constraints(horizontal: 0, vertical: 150, width: 200, height: 30))
 
         return signInForm
     }
@@ -67,19 +66,16 @@ public class iForm {
     
     
     public func initButton(
-        text: String? = "",
-        textColor: UIColor? = .darkText,
-        backgroundColor: UIColor? = .lightGray,
-        constraints: Constraints? = Constraints(horizontal: 0, vertical: 40, width: 200, height: 50),
+        text: String = "",
+        textColor: UIColor = .darkText,
+        backgroundColor: UIColor = .lightGray,
         buttonStyle : UIButtonStyle? = UIButtonStyle(inputWidth: 200.0, inputHeight: 30.0, inputRadius: 5, backgroundColor: .systemBlue, textColor: .white, tintColor: .white),
         action: UIAction = UIAction { _ in }
     ) -> iFormButtonItem {
         return iFormButtonItem(
-            frame: CGRect(x: constraints!.getHorizontal(), y: constraints!.getVertical(), width: constraints!.getWidth(), height: constraints!.getHeight()),
             text: text,
             textColor: textColor,
             backgroundColor: backgroundColor,
-            constraints: constraints!,
             action: action
         )
     }

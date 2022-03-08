@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class iFormTextFieldItem: UITextField {
+public class iFormTextFieldItem: UITextField, iFormDelegate {
     public private(set) var textField: UITextField = UITextField()
     
     public init(
@@ -39,14 +39,6 @@ public class iFormTextFieldItem: UITextField {
         super.init(coder: coder)
     }
     
-    
-    public func display(on view: UIView, withConstraints constraints: Constraints = Constraints(horizontal: 0, vertical: 0, width: 200, height: 20)) {
-        
-        view.addSubview(self.textField)
-        self.setConstraints(parentView: view, constraints)
-           
-    }
-    
         
     public func setPlaceholder(_ placeholder: String) {
         self.textField.placeholder = placeholder
@@ -59,6 +51,15 @@ public class iFormTextFieldItem: UITextField {
     
     public func setKeyboardType(_ keyboardType: iFormTextFieldKeyboardType) {
         self.textField.keyboardType = keyboardType.rawValue
+    }
+    
+    //iForm delegate
+    
+    public func display(on view: UIView, withConstraints constraints: Constraints = Constraints(horizontal: 0, vertical: 0, width: 200, height: 20)) {
+        
+        view.addSubview(self.textField)
+        self.setConstraints(parentView: view, constraints)
+           
     }
     
     public func setText(_ text: String) {
@@ -76,6 +77,11 @@ public class iFormTextFieldItem: UITextField {
     public func setTintColor(_ color: UIColor) {
         self.textField.tintColor = color
     }
+    
+    public func setBorderRadius(_ radius: CGFloat) {
+        self.textField.layer.cornerRadius = radius
+    }
+    
     
     public func setConstraints(parentView: UIView, _ constraints: Constraints) {
         self.textField.translatesAutoresizingMaskIntoConstraints = false
