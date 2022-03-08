@@ -58,14 +58,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
 ## Classes
 
-[iForm](iForm%20fram%200b696/iForm%2066dd7.md)
+[iForm](Documentation/iForm%2066dd7.md)
 
-[Constraints](iForm%20fram%200b696/Constraint%2067a4f.md)
+[Constraints](Documentation/Constraint%2067a4f.md)
 
-[iFormButtonItem](iForm%20fram%200b696/iFormButto%20ad4fa.md)
+[iFormButtonItem](Documentation/iFormButto%20ad4fa.md)
 
-[iFormTextFieldItem](iForm%20fram%200b696/iFormTextF%203d486.md)
+[iFormTextFieldItem](Documentation/iFormTextF%203d486.md)
 
-[UIButtonStyle](iForm%20fram%200b696/UIButtonSt%20715a0.md)
+[UIButtonStyle](Documentation/UIButtonSt%20715a0.md)
 
-[UITextFieldStyle](iForm%20fram%200b696/UITextFiel%20501de.md)
+[UITextFieldStyle](Documentation/UITextFiel%20501de.md)
