@@ -16,7 +16,7 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
         text: String = "",
         contentType: iFormTextFieldContentType = .normal,
         keyboardType: iFormTextFieldKeyboardType = .normal,
-        textFieldStyle : UITextFieldStyle =  UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
+        textFieldStyle: UITextFieldStyle =  UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
         ) {
             super.init(frame: CGRect(x: 0, y: 0, width: textFieldStyle.inputWidth, height: textFieldStyle.inputHeight))
             
@@ -92,6 +92,34 @@ public class iFormTextFieldItem: UITextField, iFormDelegate {
         let heightConstraint = NSLayoutConstraint(item: self.textField, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: constraints.getHeight())
         
         parentView.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
+    }
+    
+    public func getText() -> String? {
+        return self.textField.text
+    }
+    
+    public func getPlaceholder() -> String? {
+        return self.textField.placeholder
+    }
+    
+    public func getTextColor() -> UIColor {
+        return self.textField.textColor ?? .lightGray
+    }
+    
+    public func getBackgroundColor() -> UIColor? {
+        return self.textField.backgroundColor
+    }
+    
+    public func getBorderRadius() -> CGFloat {
+        return self.textField.layer.cornerRadius
+    }
+    
+    public func getTextContentType() -> UITextContentType {
+        return self.textField.textContentType
+    }
+    
+    public func getKeyboardType() -> UIKeyboardType {
+        return self.textField.keyboardType
     }
  
 }

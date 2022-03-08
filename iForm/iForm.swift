@@ -15,20 +15,20 @@ public class iForm {
     
     public func initSignInForm(
         actionToPerform : UIAction = UIAction { _ in },
-        textfieldStyle : UITextFieldStyle?,
-        buttonStyle : UIButtonStyle?
+        textfieldStyle : UITextFieldStyle = UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
+        //buttonStyle : UIButtonStyle =
     ) -> SignInForm {
         self.signInForm.emailTextField = self.initTextField(
             placeholder: "Email",
             contentType: .email,
             keyboardType: .email,
-            textFieldStyle: textfieldStyle ?? UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
+            textFieldStyle: textfieldStyle
         )
 
         self.signInForm.passwordTextField = self.initTextField(
             placeholder: "Password",
             contentType: .password,
-            textFieldStyle: textfieldStyle ?? UITextFieldStyle(inputWidth: 250, inputHeight: 30, inputRadius: 5, padding: 10, backgroundColor: .white, textColor: .black, tintColor: .white)
+            textFieldStyle: textfieldStyle
         )
 
         
